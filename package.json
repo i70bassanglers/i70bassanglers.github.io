@@ -1,0 +1,16 @@
+{
+  "name": "i70-bass-anglers-site",
+  "version": "1.0.0",
+  "description": "I-70 Bass Anglers Club Website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=* eleventy"
+  },
+  "keywords": ["bass", "fishing", "tournament", "club"],
+  "author": "I-70 Bass Anglers",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Home",
+    "url": "/",
+    "order": 1
+  },
+  {
+    "title": "Club Tournaments",
+    "url": "/tournaments/club/",
+    "order": 2,
+    "children": [
+      {
+        "title": "Upcoming",
+        "url": "/tournaments/club/upcoming/"
+      },
+      {
+        "title": "Results",
+        "url": "/tournaments/club/results/"
+      }
+    ]
+  },
+  {
+    "title": "MLTS Tournaments",
+    "url": "/tournaments/mlts/",
+    "order": 3,
+    "children": [
+      {
+        "title": "Upcoming",
+        "url": "/tournaments/mlts/upcoming/"
+      },
+      {
+        "title": "Results",
+        "url": "/tournaments/mlts/results/"
+      }
+    ]
+  },
+  {
+    "title": "Sponsors",
+    "url": "/sponsors/",
+    "order": 4
+  },
+  {
+    "title": "Regional Calendar",
+    "url": "/calendar/",
+    "order": 5
+  },
+  {
+    "title": "About",
+    "url": "/club/",
+    "order": 6,
+    "children": [
+      {
+        "title": "History",
+        "url": "/club/history/"
+      },
+      {
+        "title": "Organization", 
+        "url": "/club/organization/"
+      },
+      {
+        "title": "Members",
+        "url": "/club/members/"
+      }
+    ]
+  },
+  {
+    "title": "Blog",
+    "url": "/blog/",
+    "order": 7
+  }
+]
