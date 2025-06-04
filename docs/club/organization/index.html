@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Organization - I-70 Bass Anglers</title>
+    <meta name="description" content="true">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="site-logo">
+                    <a href="/">
+                        <img src="/images/i70-image.png" alt="I-70 Bass Anglers" class="logo-image">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/" >Home</a></li>
+                        <li class="dropdown">
+                            <a href="/tournaments/club/">Club Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/club/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/club/results/">Results</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/tournaments/mlts/">MLTS Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/mlts/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/mlts/results/">Results</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/sponsors/">Sponsors</a></li>
+                        <li><a href="/calendar/">Regional Calendar</a></li>
+                        <li class="dropdown">
+                            <a href="/club/">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/club/history/">History</a></li>
+                                <li><a href="/club/organization/">Organization</a></li>
+                                <li><a href="/club/members/">Members</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <h1 class="page-title">Club Organization</h1>
+            
+            
+            <h2>President - Jake Lantz</h2>
+<p><em>Serving since 2020</em></p>
+<ul>
+<li><strong>Email:</strong> president@i70bassanglers.com</li>
+<li><strong>Responsibilities:</strong> Overall club leadership, meeting coordination, external relations</li>
+</ul>
+<h2>Vice President - Chris Kirkley</h2>
+<p><em>Serving since 2025</em></p>
+<ul>
+<li><strong>Email:</strong> vicepresident@i70bassanglers.com</li>
+<li><strong>Responsibilities:</strong> Member relations, event planning, president support</li>
+</ul>
+<h2>Secretary/Treasurer - Trent Novelly</h2>
+<p><em>Serving since 2025</em></p>
+<ul>
+<li><strong>Email:</strong> treasurer@i70bassanglers.com</li>
+<li><strong>Responsibilities:</strong> meeting minutes, membership records</li>
+</ul>
+<h2>Treasurer - Kelly Ross</h2>
+<p><em>Serving since 2015</em></p>
+<ul>
+<li><strong>Email:</strong> treasurer@i70bassanglers.com</li>
+<li><strong>Responsibilities:</strong> Financial management, meeting minutes, membership records</li>
+</ul>
+<h2>Tournament Director - Kelly Ross</h2>
+<p><em>Serving since 2015</em></p>
+<ul>
+<li><strong>Email:</strong> tournaments@i70bassanglers.com</li>
+<li><strong>Responsibilities:</strong> Tournament scheduling, rules enforcement, scoring</li>
+</ul>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>I-70 Bass Anglers</h3>
+                    <p>Premier bass fishing club serving the I-70 corridor region.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/club/">About Us</a></li>
+                        <li><a href="/tournaments/club/">Tournaments</a></li>
+                        <li><a href="/blog/">Latest News</a></li>
+                        <li><a href="/sponsors/">Our Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@i70bassanglers.com</p>
+                    <p>Follow us on social media for updates</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  I-70 Bass Anglers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    // Toggle the active class on the navigation
+                    mainNav.classList.toggle('nav-open');
+                    
+                    // Toggle the active class on the hamburger button
+                    mobileMenuToggle.classList.toggle('menu-open');
+                    
+                    // Update aria-expanded for accessibility
+                    const isExpanded = mainNav.classList.contains('nav-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<h1>I-70 Bass Anglers Website</h1>
+<p>A static website built with <a href="https://www.11ty.dev/">Eleventy</a> for the I-70 Bass Anglers fishing club.</p>
+<h2>Project Structure</h2>
+<pre><code>i70bassanglers/
+├── _includes/
+│   └── layout.liquid          # Main layout template
+├── _data/
+│   ├── site.json           # Site-wide data
+│   └── navigation.json     # Navigation menu data
+├── _site/                  # Generated output (don't edit)
+├── blog/
+│   ├── index.md           # Blog index page
+│   └── [blog-posts].md    # Individual blog posts
+├── club/
+│   ├── index.md           # Club overview
+│   ├── history.md         # Club history
+│   ├── organization.md    # Club officers and structure
+│   └── members.md         # Member roster
+├── tournaments/
+│   ├── club/
+│   │   ├── index.md       # Club tournaments overview
+│   │   ├── upcoming.md    # Upcoming club tournaments
+│   │   └── results.md     # Club tournament results
+│   └── mlts/
+│       ├── index.md       # MLTS overview
+│       ├── upcoming.md    # Upcoming MLTS events
+│       └── results.md     # MLTS results
+├── css/
+│   └── style.css          # Main stylesheet
+├── images/                # Image assets
+├── .eleventy.js           # Eleventy configuration
+├── package.json           # Node.js dependencies
+├── index.md              # Homepage
+├── sponsors.md           # Sponsors page
+└── calendar.md           # Area fishing calendar
+</code></pre>
+<h2>Features</h2>
+<ul>
+<li><strong>Responsive Design</strong> - Works on desktop, tablet, and mobile</li>
+<li><strong>Blog System</strong> - Dynamic blog with posts and categories</li>
+<li><strong>Tournament Management</strong> - Separate sections for club and MLTS tournaments</li>
+<li><strong>Member Directory</strong> - Club member information and achievements</li>
+<li><strong>Conservation Focus</strong> - Highlights club conservation efforts</li>
+<li><strong>Sponsor Recognition</strong> - Dedicated sponsor pages and recognition</li>
+</ul>
+<h2>Technologies Used</h2>
+<ul>
+<li><strong><a href="https://www.11ty.dev/">Eleventy</a></strong> - Static site generator</li>
+<li><strong>Liquid</strong> - Template engine for dynamic content</li>
+<li><strong>Markdown</strong> - Content authoring</li>
+<li><strong>CSS3</strong> - Modern styling with CSS Grid and Flexbox</li>
+<li><strong>Front Matter</strong> - Metadata for pages and posts</li>
+</ul>
+<h2>Setup Instructions</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>Node.js (version 14 or higher)</li>
+<li>npm (comes with Node.js)</li>
+</ul>
+<h3>Installation</h3>
+<ol>
+<li>
+<p>Navigate to the project directory:</p>
+<pre><code class="language-bash">cd /Users/trentnovelly/Projects/i70bassanglers
+</code></pre>
+</li>
+<li>
+<p>Install dependencies:</p>
+<pre><code class="language-bash">npm install
+</code></pre>
+</li>
+<li>
+<p>Start the development server:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+</li>
+<li>
+<p>Open your browser to <code>http://localhost:8080</code></p>
+</li>
+</ol>
+<h3>Available Scripts</h3>
+<ul>
+<li><code>npm start</code> - Start development server with live reload</li>
+<li><code>npm run build</code> - Build the site for production</li>
+<li><code>npm run debug</code> - Run with debug output</li>
+</ul>
+<h2>Content Management</h2>
+<h3>Adding Blog Posts</h3>
+<ol>
+<li>Create a new <code>.md</code> file in the <code>blog/</code> directory</li>
+<li>Add front matter with title, date, author, tags, and excerpt</li>
+<li>Write content in Markdown format</li>
+</ol>
+<p>Example:</p>
+<pre><code class="language-markdown">---
+layout: layout.liquid
+title: &quot;Your Post Title&quot;
+date: 2024-10-26
+author: &quot;Your Name&quot;
+tags: [&quot;tournament-report&quot;, &quot;fishing-tips&quot;]
+excerpt: &quot;Brief description of the post content.&quot;
+---
+
+## Your Content Here
+
+Write your blog post content in Markdown...
+</code></pre>
+<h3>Updating Tournament Results</h3>
+<ol>
+<li>
+<p>Edit the appropriate results file:</p>
+<ul>
+<li>Club tournaments: <code>tournaments/club/results.md</code></li>
+<li>MLTS tournaments: <code>tournaments/mlts/results.md</code></li>
+</ul>
+</li>
+<li>
+<p>Update standings tables and add new tournament results</p>
+</li>
+<li>
+<p>Update upcoming tournaments in respective <code>upcoming.md</code> files</p>
+</li>
+</ol>
+<h3>Managing Members</h3>
+<ol>
+<li>Edit <code>club/members.md</code></li>
+<li>Update member roster, standings, and achievements</li>
+<li>Add new members to appropriate sections</li>
+</ol>
+<h3>Adding Sponsors</h3>
+<ol>
+<li>Edit <code>sponsors.md</code></li>
+<li>Add new sponsor information with contact details and benefits</li>
+<li>Include sponsor logos in the <code>images/</code> directory</li>
+</ol>
+<h2>Site Configuration</h2>
+<h3>Global Settings</h3>
+<p>Edit <code>_data/site.json</code> to update:</p>
+<ul>
+<li>Site name and description</li>
+<li>Contact information</li>
+<li>Social media links</li>
+<li>Founded date</li>
+</ul>
+<h3>Navigation Menu</h3>
+<p>Edit <code>_data/navigation.json</code> to:</p>
+<ul>
+<li>Add/remove menu items</li>
+<li>Update URLs</li>
+<li>Modify menu structure</li>
+</ul>
+<h3>Layout Customization</h3>
+<p>Edit <code>_includes/layout.liquid</code> to:</p>
+<ul>
+<li>Modify HTML structure</li>
+<li>Update header/footer content</li>
+<li>Add new sections</li>
+</ul>
+<h2>Styling</h2>
+<p>The site uses a custom CSS framework with:</p>
+<ul>
+<li>CSS Custom Properties (variables) for consistent theming</li>
+<li>Responsive design with mobile-first approach</li>
+<li>Accessible color contrast and focus styles</li>
+<li>Print-friendly styles</li>
+</ul>
+<h3>Color Scheme</h3>
+<ul>
+<li><strong>Primary Blue</strong>: #1e3a8a (navigation, headings)</li>
+<li><strong>Secondary Green</strong>: #059669 (accents, success states)</li>
+<li><strong>Accent Gold</strong>: #f59e0b (highlights, calls-to-action)</li>
+<li><strong>Text Dark</strong>: #1f2937 (main text)</li>
+<li><strong>Text Light</strong>: #6b7280 (secondary text)</li>
+</ul>
+<h3>Customizing Styles</h3>
+<p>Edit <code>css/style.css</code> to:</p>
+<ul>
+<li>Modify colors in the <code>:root</code> section</li>
+<li>Update typography and spacing</li>
+<li>Add new component styles</li>
+<li>Adjust responsive breakpoints</li>
+</ul>
+<h2>Content Guidelines</h2>
+<h3>Writing Style</h3>
+<ul>
+<li>Use clear, concise language</li>
+<li>Write in active voice</li>
+<li>Include specific details (dates, locations, results)</li>
+<li>Maintain consistent terminology</li>
+</ul>
+<h3>Image Guidelines</h3>
+<ul>
+<li>Use high-quality images (minimum 1200px wide)</li>
+<li>Optimize for web (JPEG for photos, PNG for graphics)</li>
+<li>Include descriptive alt text for accessibility</li>
+<li>Store in appropriate subdirectories in <code>images/</code></li>
+</ul>
+<h3>SEO Best Practices</h3>
+<ul>
+<li>Include descriptive page titles</li>
+<li>Write compelling meta descriptions</li>
+<li>Use proper heading hierarchy (H1, H2, H3)</li>
+<li>Include relevant keywords naturally</li>
+</ul>
+<h2>Deployment</h2>
+<h3>Building for Production</h3>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<p>This generates the complete static site in the <code>_site/</code> directory.</p>
+<h3>Hosting Options</h3>
+<p>The generated site can be hosted on:</p>
+<ul>
+<li><strong>Netlify</strong> - Automatic deployments from Git</li>
+<li><strong>Vercel</strong> - Fast global CDN</li>
+<li><strong>GitHub Pages</strong> - Free hosting for public repositories</li>
+<li><strong>Traditional Web Hosting</strong> - Upload <code>_site/</code> contents via FTP</li>
+</ul>
+<h3>Domain Setup</h3>
+<ol>
+<li>Purchase a domain (suggested: i70bassanglers.com)</li>
+<li>Configure DNS to point to hosting provider</li>
+<li>Set up SSL certificate (usually automatic with modern hosts)</li>
+</ol>
+<h2>Maintenance</h2>
+<h3>Regular Updates</h3>
+<ul>
+<li><strong>Weekly</strong>: Add tournament results and upcoming events</li>
+<li><strong>Monthly</strong>: Update member standings and blog posts</li>
+<li><strong>Seasonally</strong>: Review and update sponsor information</li>
+<li><strong>Annually</strong>: Update officer information and club statistics</li>
+</ul>
+<h3>Backup Strategy</h3>
+<ol>
+<li>Keep source files in version control (Git)</li>
+<li>Backup database of images and assets</li>
+<li>Document any custom configuration changes</li>
+</ol>
+<h2>Support</h2>
+<p>For questions about the website:</p>
+<ul>
+<li><strong>Technical Issues</strong>: Contact webmaster</li>
+<li><strong>Content Updates</strong>: Contact club communications chair</li>
+<li><strong>Eleventy Documentation</strong>: <a href="https://www.11ty.dev/">11ty.dev</a></li>
+</ul>
+<h2>License</h2>
+<p>This website template is created for the I-70 Bass Anglers club. Content and design are proprietary to the club.</p>
+<hr>
+<p><strong>Built with ❤️ for the I-70 Bass Anglers community</strong></p>

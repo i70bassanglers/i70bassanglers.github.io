@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to I-70 Bass Anglers - I-70 Bass Anglers</title>
+    <meta name="description" content="true">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="site-logo">
+                    <a href="/">
+                        <img src="/images/i70-image.png" alt="I-70 Bass Anglers" class="logo-image">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a href="/tournaments/club/">Club Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/club/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/club/results/">Results</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/tournaments/mlts/">MLTS Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/mlts/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/mlts/results/">Results</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/sponsors/">Sponsors</a></li>
+                        <li><a href="/calendar/">Regional Calendar</a></li>
+                        <li class="dropdown">
+                            <a href="/club/">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/club/history/">History</a></li>
+                                <li><a href="/club/organization/">Organization</a></li>
+                                <li><a href="/club/members/">Members</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <h1 class="page-title">Welcome to I-70 Bass Anglers</h1>
+            
+            
+            <p>The I-70 Bass Anglers is the premier bass fishing club serving the I-70 corridor region. Since our founding as FROGs in 1995, we've been dedicated to promoting the sport of bass fishing through competitive tournaments, conservation efforts, and building lasting friendships among anglers.</p>
+<h3>Upcoming Events</h3>
+<p><strong>Next Club Tournament:</strong> <a href="/tournaments/club/upcoming/">Check our tournament schedule</a> for the latest information.</p>
+<p><strong>Next Meeting:</strong> First Thursday of every month at 7:00 PM</p>
+<h3>What We Offer</h3>
+<ul>
+<li><strong>Competitive Tournaments</strong> - Monthly club tournaments with prizes and points standings</li>
+<li><strong>Milford Lake Team Series</strong> - Host to the the Milford Lake Tournament Series</li>
+<li><strong>Conservation Efforts</strong> - Supporting local lake conservation and fish habitat projects</li>
+<li><strong>Camaraderie</strong> - Build friendships with fellow bass fishing enthusiasts</li>
+<li><strong>Education</strong> - Learn new techniques and strategies from experienced anglers</li>
+</ul>
+<h3>Join Us</h3>
+<p>Whether you're a seasoned tournament angler or just getting started in bass fishing, the I-70 Bass Anglers welcomes you. We fish lakes throughout northeast Kansas along the I-70 corridor and are always looking for new members who share our passion for bass fishing.</p>
+<p><a href="/club/organization/">Learn more about our club organization</a> or check out our <a href="/tournaments/club/upcoming/">upcoming tournaments</a>.</p>
+<h3>Latest News</h3>
+<ul>
+<li><strong>May 24, 2025</strong> - <a href="/blog/may-tuttle-tournament-recap/">May Tournament Recap: Tuttle Creek Lake Success</a></li>
+</ul>
+<p><a href="/blog/">View all blog posts</a></p>
+<h3>Our Sponsors</h3>
+<p>We're proud to be supported by local businesses and national fishing industry leaders. <a href="/sponsors/">View our sponsors</a> and show them your support.</p>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>I-70 Bass Anglers</h3>
+                    <p>Premier bass fishing club serving the I-70 corridor region.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/club/">About Us</a></li>
+                        <li><a href="/tournaments/club/">Tournaments</a></li>
+                        <li><a href="/blog/">Latest News</a></li>
+                        <li><a href="/sponsors/">Our Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@i70bassanglers.com</p>
+                    <p>Follow us on social media for updates</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  I-70 Bass Anglers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    // Toggle the active class on the navigation
+                    mainNav.classList.toggle('nav-open');
+                    
+                    // Toggle the active class on the hamburger button
+                    mobileMenuToggle.classList.toggle('menu-open');
+                    
+                    // Update aria-expanded for accessibility
+                    const isExpanded = mainNav.classList.contains('nav-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
