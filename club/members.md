@@ -19,7 +19,7 @@ description: "Current members of I-70 Bass Anglers and member achievements."
 | Bob Wilson | Secretary/Treasurer | 2010 | Perfect Attendance Award 2020-2023 |
 | Lisa Chen | Tournament Director | 2018 | Tournament Organization Excellence |
 
-#### Tournament Anglers
+#### Active Members
 
 | Name | Member Since | 2024 Points | Best Finish |
 |------|--------------|-------------|-------------|
@@ -47,7 +47,12 @@ description: "Current members of I-70 Bass Anglers and member achievements."
 
 #### 2024 Season Highlights
 
-**Club Championship Leaders:**
+**Club AOY Leaders:**
+1. John Smith - 485 points
+2. David Rodriguez - 462 points  
+3. Mark Davidson - 441 points
+
+**Club CAOY Leaders:**
 1. John Smith - 485 points
 2. David Rodriguez - 462 points  
 3. Mark Davidson - 441 points
@@ -72,35 +77,6 @@ description: "Current members of I-70 Bass Anglers and member achievements."
 - **2020:** David Rodriguez
 - **2019:** Mike Thompson
 
-**MLTS Qualifiers (Current Season):**
-- John Smith
-- Sarah Martinez
-- David Rodriguez
-- Mark Davidson
-- Jennifer Roberts
-
-**Conservation Awards:**
-- **2024 Conservation Volunteer of the Year:** Mark Davidson
-- **Youth Mentor Award:** Lisa Chen
-- **Habitat Improvement Leadership:** Tom Anderson
-
-### Youth Members
-
-| Name | Age | Parent/Guardian | Achievements |
-|------|-----|-----------------|-------------|
-| Tyler Martinez | 16 | Sarah Martinez | 2024 Youth Champion |
-| Emma Johnson | 14 | Chris Johnson | Big Bass - Youth Division |
-| Jake Wilson | 15 | Bob Wilson | Most Improved Youth Angler |
-| Madison Lee | 13 | Kevin Lee | Sportsmanship Award |
-| Noah Smith | 17 | John Smith | MLTS Youth Qualifier |
-
-### Honorary Members
-
-#### Charter Members (Founding 1995)
-- **Tom Johnson** *(Retired 2020)* - First Club President, 25 years of service
-- **Bill Davis** *(Active)* - Charter member still competing
-- **Frank Miller** *(Retired 2018)* - Conservation program founder
-
 #### Hall of Fame
 *Members with significant contributions to club success*
 
@@ -108,32 +84,9 @@ description: "Current members of I-70 Bass Anglers and member achievements."
 - **Susan Adams** - 10-time club champion (1998-2007)
 - **Robert Chen** - MLTS Team Champion 2008, 2012
 
-### Member Benefits
-
-**All Active Members Receive:**
-- Tournament eligibility and points tracking
-- Monthly newsletter and meeting notices
-- Club gear discounts (shirts, hats, tackle)
-- Access to member-only fishing seminars
-- MLTS qualification opportunities
-- Conservation project participation
-
-**Recognition Programs:**
-- Annual awards banquet
-- Perfect attendance recognition
-- Milestone membership anniversaries
-- Tournament achievement awards
-- Conservation service recognition
-
 ### Membership Information
 
-**Current Membership:** 65 total (45 active, 12 associate, 8 youth)
-
-**Membership Categories:**
-- **Active:** $50/year - Full tournament and voting privileges
-- **Associate:** $25/year - Meeting attendance, limited tournament access
-- **Youth:** $15/year - Full benefits with parental consent
-- **Family:** $75/year - Two adults plus youth members
+**Current Membership:** 
 
 **How to Join:**
 1. Attend a monthly meeting (first Tuesday, 7:00 PM)
@@ -141,6 +94,6 @@ description: "Current members of I-70 Bass Anglers and member achievements."
 3. Complete membership application and pay dues
 4. Receive club handbook and tournament schedule
 
-**Contact:** membership@i70bassanglers.com
+**Contact:**
 
 We're always welcoming new members who share our passion for bass fishing and conservation!

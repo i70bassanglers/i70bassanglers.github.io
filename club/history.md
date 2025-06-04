@@ -35,14 +35,6 @@ The club has continued to evolve while maintaining our core values of competitio
 - **2022:** Celebrated our largest membership roster with 55 active members
 - **2023:** Launched our fish habitat improvement project at Lake of the Ozarks
 
-### Conservation Legacy
-
-Throughout our history, conservation has been a cornerstone of our mission. We've contributed over 500 volunteer hours annually to:
-- Habitat improvement projects
-- Lake clean-up efforts  
-- Youth fishing education
-- Fish population monitoring
-
 ### Looking Forward
 
 As we move forward, the I-70 Bass Anglers remains committed to our founding principles while embracing new opportunities to grow the sport of bass fishing in Kansas. We continue to welcome new members who share our passion for competitive bass fishing and conservation stewardship.

@@ -8,67 +8,15 @@ description: "I-70 Bass Anglers sponsors and business partners supporting our cl
 
 The I-70 Bass Anglers is proud to partner with local businesses and fishing industry leaders who support our club, tournaments, and conservation efforts. Please show your appreciation by supporting these fine businesses.
 
-### Title Sponsors
-
-#### **Bass Pro Shops - Columbia**
-*Title Sponsor since 2020*
-
-**Location:** 1819 W Worley Street, Columbia, MO 65203
-**Phone:** (573) 447-4045
-**Website:** [basspro.com](https://basspro.com)
-
-Bass Pro Shops Columbia has been our largest supporter, providing tournament prizes, equipment discounts, and educational seminars. Their commitment to conservation aligns perfectly with our club values.
-
-**Member Benefits:**
-- 15% discount on fishing tackle and equipment
-- Priority access to new product demonstrations
-- Free seminars and educational events
-- Tournament prize support
-
----
-
-#### **Dick's Sporting Goods - Jefferson City**
-*Major Sponsor since 2018*
-
-**Location:** 3600 Country Club Drive, Jefferson City, MO 65109
-**Phone:** (573) 893-4500
-**Website:** [dickssportinggoods.com](https://dickssportinggoods.com)
-
-Dick's provides ongoing support for our youth fishing programs and tournament operations.
-
-**Member Benefits:**
-- 10% discount on fishing gear
-- Special pricing on boats and motors
-- Support for youth tournament entry fees
-
----
-
 ### Marine & Equipment Sponsors
 
-#### **Lake of the Ozarks Marine**
-*Marine Services Partner*
-
-**Location:** 1245 Bagnell Dam Boulevard, Lake Ozark, MO 65049
-**Phone:** (573) 365-3040
-
-Full-service marina offering boat sales, service, and tournament support at Lake of the Ozarks events.
-
-**Services:**
-- Tournament boat preparation and service
-- Member discount on marine services
-- Emergency tournament support
-- Equipment storage for MLTS events
-
----
-
-#### **Stockton Lake Marina**
+#### **Some Marine Equipment Company**
 *Tournament Support Partner*
 
-**Location:** 18278 E State Highway 32, Stockton, MO 65785
-**Phone:** (417) 276-3245
+**Location:** 123 Address, City, State, Zip
+**Phone:** (123) 456-7890
 
 **Services:**
-- Tournament headquarters for Stockton Lake events
 - Fuel and supplies
 - Boat launch facilities
 - Member discount on marina services
@@ -90,35 +38,13 @@ Strike King provides tournament prizes and supports our educational programs wit
 
 ---
 
-#### **Garmin Marine Electronics**
-*Electronics Sponsor*
-
-**Support:**
-- Tournament prize electronics
-- Technical support and training
-- Member discount program
-- Equipment demonstrations
-
----
-
-#### **Ranger Boats**
-*Boat Sponsor*
-
-**Support:**
-- Tournament boat awards
-- Demo opportunities
-- Technical seminars
-- Member appreciation events
-
----
-
 ### Local Business Sponsors
 
-#### **Joe's Bait & Tackle - Columbia**
+#### **Joe's Bait & Tackle**
 *Local Tackle Support*
 
-**Location:** 2150 I-70 Drive SW, Columbia, MO 65203
-**Phone:** (573) 442-3474
+**Location:** 123 Address, City, State, Zip
+**Phone:** (123) 456-7890
 
 Family-owned shop providing local knowledge, live bait, and tackle for central Kansas lakes.
 
@@ -130,21 +56,7 @@ Family-owned shop providing local knowledge, live bait, and tackle for central K
 
 ---
 
-#### **Central Kansas Ford**
-*Vehicle Partner*
-
-**Location:** 1200 Vandiver Drive, Columbia, MO 65202
-**Phone:** (573) 874-1144
-
-**Support:**
-- Tournament vehicle support
-- Member fleet pricing
-- Towing equipment demonstrations
-- Truck accessory discounts
-
----
-
-#### **Casey's General Store**
+#### **Handy's**
 *Fuel & Convenience Partner*
 
 Multiple locations throughout our tournament trail provide fuel, snacks, and convenience items.
@@ -156,54 +68,19 @@ Multiple locations throughout our tournament trail provide fuel, snacks, and con
 
 ---
 
-### Conservation Partners
-
-#### **Kansas Department of Conservation**
-*Conservation Partner*
-
-**Support:**
-- Habitat improvement project partnerships
-- Educational program development
-- Fish stocking and monitoring assistance
-- Conservation awareness initiatives
-
----
-
-#### **Truman Lake Association**
-*Lake Conservation Partner*
-
-**Support:**
-- Lake improvement projects
-- Water quality monitoring
-- Conservation education
-- Habitat enhancement
-
----
-
 ### Hospitality Sponsors
 
-#### **Hampton Inn & Suites - Columbia**
+#### **Hampton Inn & Suites**
 *Lodging Partner*
 
-**Location:** 1225 Fellows Place, Columbia, MO 65201
-**Phone:** (573) 214-2100
+**Location:** 123 Address, City, State, Zip
+**Phone:** (123) 456-7890
 
 **Member Benefits:**
 - Tournament rate discounts
 - Group booking assistance
 - Meeting room availability
 - Complimentary breakfast for tournament participants
-
----
-
-#### **Lake of the Ozarks Lodge**
-*MLTS Lodging Partner*
-
-**Support:**
-- Discounted room rates for MLTS events
-- Group meal arrangements
-- Meeting facilities
-- Transportation coordination
 
 ---
 
@@ -223,30 +100,6 @@ Provides meal support for monthly meetings and special events.
 *Awards Banquet Sponsor*
 
 Multiple locations provide desserts and treats for our annual awards banquet.
-
----
-
-### Professional Services
-
-#### **First National Bank of Central Kansas**
-*Financial Services Partner*
-
-**Support:**
-- Club banking services
-- Tournament accounting assistance
-- Financial planning seminars for members
-- Equipment financing options
-
----
-
-#### **Miller Insurance Agency**
-*Insurance Partner*
-
-**Services:**
-- Boat and equipment insurance
-- Tournament liability coverage
-- Member discount programs
-- Risk management consultation
 
 ---
 

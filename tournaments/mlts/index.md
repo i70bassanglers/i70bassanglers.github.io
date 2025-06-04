@@ -9,7 +9,7 @@ The I-70 Bass Anglers proudly hosts the Milford Lake Team Series. The MLTS is a 
 
 ### MLTS Teams
 
-#### 2024 Qualified Anglers
+#### 2024 Teams
 
 | Anglers | MLTS Experience |
 |--------|---------------------|
