@@ -56,16 +56,7 @@
       {
         "title": "Organization", 
         "url": "/club/organization/"
-      },
-      {
-        "title": "Members",
-        "url": "/club/members/"
       }
     ]
-  },
-  {
-    "title": "Blog",
-    "url": "/blog/",
-    "order": 7
   }
 ]

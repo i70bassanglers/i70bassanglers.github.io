@@ -52,7 +52,6 @@ h6 { font-size: 1.125rem; }
 
 p {
   margin-bottom: 1rem;
-  color: var(--text-dark);
 }
 
 a {
@@ -260,7 +259,7 @@ tr:hover {
   background-color: var(--background-light);
 }
 
-/* Blog Post Styles */
+/* Blog Post Styles
 .blog-post-preview {
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
@@ -313,7 +312,7 @@ tr:hover {
 
 .read-more:hover {
   color: var(--secondary-color);
-}
+} */
 
 /* Buttons */
 .btn {

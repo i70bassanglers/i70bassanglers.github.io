@@ -17,12 +17,12 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj).toISOString();
   });
 
-  // Add collection for blog posts (exclude the blog index)
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("./blog/*.md")
-      .filter(post => !post.inputPath.endsWith("/blog/index.md"))
-      .reverse();
-  });
+  // // Add collection for blog posts (exclude the blog index)
+  // eleventyConfig.addCollection("posts", function(collectionApi) {
+  //   return collectionApi.getFilteredByGlob("./blog/*.md")
+  //     .filter(post => !post.inputPath.endsWith("/blog/index.md"))
+  //     .reverse();
+  // });
 
   // Add collection for tournaments
   eleventyConfig.addCollection("tournaments", function(collectionApi) {
