@@ -1,27 +1,22 @@
 ---
 layout: layout.liquid
-title: "Upcoming Club Tournaments"
+title: "Upcoming Club Tournament Information"
 description: "Next I-70 Bass Anglers club tournaments, registration details, and lake information."
 ---
 
-## Upcoming Club Tournaments
-
-### Next Tournament: July 19, 2025
-
-#### **Wilson Lake**
-**TBD**
+## {{ tournaments.next.formattedDate }}
+### **{{ tournaments.next.lake }}**
 
 **Tournament Details:**
-- **Date:** Saturday, July 19, 2025
-- **Registration:** 30 minutes to safe light
-- **Tournament Hours:** Safe light to 2:00 PM
+- **Date:** {{ tournaments.next.formattedDate }}
+- **Check-In:** {{tournaments.next.checkin}}
+- **Tournament Hours:** Safe light to {{tournaments.next.weighin}}
 - **Entry Fee:** $50 per angler
 
 **Location & Directions:**
-- **Launch:** Wilson State Park Boat Ramp
-- **Address:** Sylvan Grove, KS 67481
-- **GPS:** 38.92480, 98.50846
-
+- **Launch:** {{ramps[tournaments.next.ramp].name}}
+- **Address:** {{ramps[tournaments.next.ramp].address}}
+- **GPS:** {{ramps[tournaments.next.ramp].gps}}
 ---
 ### New Member Welcome
 
@@ -41,26 +36,9 @@ First time joining us? Here's what to expect:
 
 ---
 
-### Remaining 2025 Schedule
-
-
-#### August 2, 2025
-**Council Grove Reservoir**
-
-#### September 6, 2025
-**Perry**
-
-#### September 20, 2025
-**Glenn Elder**
-
-#### October 18 & 19, 2025
-**Club Classic - TBD**
-
----
-
 ### Contact Information
 
-**Tournament Director:** Kelly Ross
+**Tournament Director:** {{club_officers.tournament_director.name}}
 - **Email:** {{ contact.email }}
 
 Ready to fish with us? [Contact the Tournament Director](mailto:{{ contact.email }}) to get registered for the next tournament!

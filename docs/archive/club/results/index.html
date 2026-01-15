@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Tournament Results - I-70 Bass Anglers</title>
+    <meta name="description" content="I-70 Bass Anglers club tournament schedule, results, and information.">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="site-logo">
+                    <a href="/">
+                        <img src="/images/i70-image.png" alt="I-70 Bass Anglers" class="logo-image">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/" >Home</a></li>
+                        <li class="dropdown">
+                            <a href="/tournaments/club/">Club Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/club/schedule/">Schedule</a></li>
+                                <li><a href="/tournaments/club/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/club/results/">Results</a></li>
+                                <li><a href="/tournaments/club/standings/">Standings</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/tournaments/mlts/">MLTS Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/mlts/schedule/">Schedule</a></li>
+                                <li><a href="/tournaments/mlts/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/mlts/results/">Results</a></li>
+                                <li><a href="/tournaments/mlts/standings/">Standings</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/sponsors/">Sponsors</a></li>
+                        <li><a href="/calendar/">Regional Calendar</a></li>
+                        <li class="dropdown">
+                            <a href="/club/">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/club/history/">History</a></li>
+                                <li><a href="/club/organization/">Organization</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <h1 class="page-title">Club Tournament Results</h1>
+            
+            
+            <h2>April 5 - Council Grove City Lake</h2>
+<p><strong>Rescheduled</strong><br>
+To be held August 16th on Milford.</p>
+<h2>April 19 - Wilson</h2>
+<p><strong>Top 3</strong></p>
+<ol>
+<li>Matt Wright &amp; Sean Finegan - 5 fish, 11.39lbs</li>
+<li>Spencer Martinez &amp; Kelly Ross - 2 fish, 7.75lbs</li>
+<li>Tim Guenther &amp; Bobby Zimmerman - 3 fish, 7.69lbs</li>
+</ol>
+<p><strong>Big Bass</strong><br>
+Spencer Martinez &amp; Kelly Ross - 4.11lbs</p>
+<p><strong><a href="april_19_wilson">Full Results</a></strong></p>
+<h2>May 10 - Tuttle Creek</h2>
+<p><strong>Top 3</strong></p>
+<ol>
+<li>Taylor Larrabee &amp; Tyler Regier - 4 fish, 12.43lbs</li>
+<li>Jake Lantz &amp; Sean Finegan - 3 fish, 8.29lbs</li>
+<li>Mike Vacanti &amp; Chris Kirkley - 3 fish, 8.03lbs</li>
+</ol>
+<p><strong>Big Bass</strong><br>
+Taylor Larrabee &amp; Tyler Regier - 4.42lbs</p>
+<p><strong><a href="may_10_tuttle">Full Results</a></strong></p>
+<h2>June 21 - Milford</h2>
+<p><strong>Canceled</strong><br>
+Pending rescheduling</p>
+<h2>Future Tournaments...</h2>
+<p>This page will be updated as the season progresses. Come back to see future tournament results!<br>
+Our next tournament will be held <a href="/tournaments/club/upcoming">July 19th at Wilson</a>.</p>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>I-70 Bass Anglers</h3>
+                    <p>Premier bass fishing club serving the I-70 corridor region.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/club/">About Us</a></li>
+                        <li><a href="/tournaments/club/">Tournaments</a></li>
+                        <li><a href="/sponsors/">Our Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:gnbassn2day@yahoo.com">gnbassn2day@yahoo.com</a></li>
+                        <p>Follow us on <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a> for updates</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 I-70 Bass Anglers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    // Toggle the active class on the navigation
+                    mainNav.classList.toggle('nav-open');
+                    
+                    // Toggle the active class on the hamburger button
+                    mobileMenuToggle.classList.toggle('menu-open');
+                    
+                    // Update aria-expanded for accessibility
+                    const isExpanded = mainNav.classList.contains('nav-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

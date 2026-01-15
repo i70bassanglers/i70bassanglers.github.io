@@ -4,36 +4,27 @@ title: "Club Tournament Results"
 description: "I-70 Bass Anglers club tournament schedule, results, and information."
 ---
 
-## April 5 - Council Grove City Lake
-**Rescheduled**  
-To be held August 16th on Milford.
-
-## April 19 - Wilson
+{%- for dateEntry in results.byDate %}
+## {{ dateEntry.formattedDate }}
 **Top 3**  
-1. Matt Wright & Sean Finegan - 5 fish, 11.39lbs
-2. Spencer Martinez & Kelly Ross - 2 fish, 7.75lbs
-3. Tim Guenther & Bobby Zimmerman - 3 fish, 7.69lbs
+{%- for result in dateEntry.results limit:3 %}
+{{ forloop.index }}. {{ result.angler }}{% if result.coangler %} & {{ result.coangler }}{% endif %} - {{ result.count }} fish, {{ result.weight }}lbs
+{%- endfor %}
 
 **Big Bass**  
-Spencer Martinez & Kelly Ross - 4.11lbs
+{{ dateEntry.bigBass.angler }}{% if dateEntry.bigBass.coangler %} & {{ dateEntry.bigBass.coangler }}{% endif %} - {{ dateEntry.bigBass.big_bass }}lbs
 
-**[Full Results](april_19_wilson)**
+{%- assign date_slug = dateEntry.date | replace: '/', '_' | downcase %}
 
-## May 10 - Tuttle Creek 
-**Top 3**  
-1. Taylor Larrabee & Tyler Regier - 4 fish, 12.43lbs
-2. Jake Lantz & Sean Finegan - 3 fish, 8.29lbs
-3. Mike Vacanti & Chris Kirkley - 3 fish, 8.03lbs
+**[Full Results]({{ date_slug }})**
 
-**Big Bass**  
-Taylor Larrabee & Tyler Regier - 4.42lbs
-
-**[Full Results](may_10_tuttle)**
-
-## June 21 - Milford
-**Canceled**  
-Pending rescheduling
+{%- endfor %}
 
 ## Future Tournaments...
-This page will be updated as the season progresses. Come back to see future tournament results!  
-Our next tournament will be held [July 19th at Wilson](/tournaments/club/upcoming).
+This page will be updated as the season progresses.  
+Come back to see future tournament results!   
+
+  
+{% if tournaments.next %}
+Our next tournament will be held {{ tournaments.next.formattedDate }} at {{ tournaments.next.lake }}.
+{% endif %}

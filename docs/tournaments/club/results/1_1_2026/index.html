@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>January 01, 2026 Results - I-70 Bass Anglers</title>
+    <meta name="description" content="Tournament results from January 01, 2026">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="site-logo">
+                    <a href="/">
+                        <img src="/images/i70-image.png" alt="I-70 Bass Anglers" class="logo-image">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/" >Home</a></li>
+                        <li class="dropdown">
+                            <a href="/tournaments/club/">Club Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/club/schedule/">Schedule</a></li>
+                                <li><a href="/tournaments/club/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/club/results/">Results</a></li>
+                                <li><a href="/tournaments/club/standings/">Standings</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/tournaments/mlts/">MLTS Tournaments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tournaments/mlts/schedule/">Schedule</a></li>
+                                <li><a href="/tournaments/mlts/upcoming/">Upcoming</a></li>
+                                <li><a href="/tournaments/mlts/results/">Results</a></li>
+                                <li><a href="/tournaments/mlts/standings/">Standings</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/sponsors/">Sponsors</a></li>
+                        <li><a href="/calendar/">Regional Calendar</a></li>
+                        <li class="dropdown">
+                            <a href="/club/">About</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/club/history/">History</a></li>
+                                <li><a href="/club/organization/">Organization</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <h1 class="page-title">January 01, 2026 Results</h1>
+            
+            
+            <h2>January 01, 2026</h2>
+<table>
+<thead>
+<tr>
+<th>Team</th>
+<th>Fish Weighed</th>
+<th>Weight</th>
+<th>Big Bass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fix &amp; six</td>
+<td>5</td>
+<td>13lbs</td>
+<td>4.6lbs</td>
+</tr>
+<tr>
+<td>one &amp; two</td>
+<td>5</td>
+<td>12lbs</td>
+<td>3lbs</td>
+</tr>
+<tr>
+<td>three &amp; four</td>
+<td>5</td>
+<td>10lbs</td>
+<td>5lbs</td>
+</tr>
+<tr>
+<td>seven &amp; eight</td>
+<td>5</td>
+<td>9lbs</td>
+<td>5.1lbs</td>
+</tr>
+</tbody>
+</table>
+<h3>Big Bass Winner</h3>
+<h4>seven &amp; eight</h4>
+<p><strong>5.1lbs</strong></p>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>I-70 Bass Anglers</h3>
+                    <p>Premier bass fishing club serving the I-70 corridor region.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/club/">About Us</a></li>
+                        <li><a href="/tournaments/club/">Tournaments</a></li>
+                        <li><a href="/sponsors/">Our Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:gnbassn2day@yahoo.com">gnbassn2day@yahoo.com</a></li>
+                        <p>Follow us on <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a> for updates</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 I-70 Bass Anglers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (mobileMenuToggle && mainNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    // Toggle the active class on the navigation
+                    mainNav.classList.toggle('nav-open');
+                    
+                    // Toggle the active class on the hamburger button
+                    mobileMenuToggle.classList.toggle('menu-open');
+                    
+                    // Update aria-expanded for accessibility
+                    const isExpanded = mainNav.classList.contains('nav-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

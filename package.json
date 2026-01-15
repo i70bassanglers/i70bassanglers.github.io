@@ -7,10 +7,18 @@
     "build": "eleventy",
     "debug": "DEBUG=* eleventy"
   },
-  "keywords": ["bass", "fishing", "tournament", "club"],
+  "keywords": [
+    "bass",
+    "fishing",
+    "tournament",
+    "club"
+  ],
   "author": "I-70 Bass Anglers",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0"
   }
 }

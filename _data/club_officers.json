@@ -1,0 +1,26 @@
+{
+    "president":{
+        "name":"Jake Lantz",
+        "year":"2020"
+    },
+    "vice_president":{
+        "name":"Chris Kirkley",
+        "year":"2025"
+    },
+    "secretary":{
+        "name":"Trent Novelly",
+        "year":"2025"
+    },
+    "treasurer":{
+        "name":"Kelly Ross",
+        "year": "2015"
+    },
+    "tournament_director":{
+        "name":"Kelly Ross",
+        "year": "2015"
+    },
+    "asst_tournament_director":{
+        "name": "Mike Vacanti",
+        "year": "2025"
+    }
+}
