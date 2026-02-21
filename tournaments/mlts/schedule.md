@@ -12,7 +12,7 @@ All tournaments are held at Milford Lake.
 {%- for tournament in mlts_tournaments.tournaments %}
 {%- case tournament.status %}
 {%- when "scheduled" %}
-| {{tournament.date}} | TDB |
+| {{tournament.date}} | TBD |
 {%- when "rescheduled" %}
 | ~~{{tournament.date}}~~ | Rescheduled |
 {%- when "complete" %}

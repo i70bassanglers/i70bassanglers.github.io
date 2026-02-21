@@ -11,7 +11,7 @@ description: "I-70 Bass Anglers club tournament schedule, results, and informati
 {%- for tournament in tournaments.tournaments %}
 {%- case tournament.status %}
 {%- when "scheduled" %}
-| {{tournament.date}} | {{tournament.lake}} | TDB |
+| {{tournament.date}} | {{tournament.lake}} | TBD |
 {%- when "rescheduled" %}
 | ~~{{tournament.date}}~~ | ~~{{tournament.lake}}~~ | Rescheduled |
 {%- when "complete" %}
