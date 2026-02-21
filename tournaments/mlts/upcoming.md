@@ -5,18 +5,18 @@ description: "Next Milford Lake Teams Series event for Kansas anglers."
 ---
 
 ## {{ mlts_tournaments.next.formattedDate }}
-### **{{ mlts_tournaments.next.lake }}**
 
 **Tournament Details:**
-- **Date:** {{ mlts_tournaments.next.formattedDate }}
 - **Check-In:** {{mlts_tournaments.next.checkin}}
 - **Tournament Hours:** Safe light to {{mlts_tournaments.next.weighin}}
-- **Entry Fee:** $50 per angler
+- **Entry Fee:** $100 per team
 
 **Location & Directions:**
-- **Launch:** {{ramps[mlts_tournaments.next.ramp].name}}
-- **Address:** {{ramps[mlts_tournaments.next.ramp].address}}
-- **GPS:** {{ramps[mlts_tournaments.next.ramp].gps}}
+- **Launch:** {{ramps["milford_south_ramp"].name}}
+- **Address:** [{{ramps["milford_south_ramp"].address}}]({{ramps["milford_south_ramp"].gmaps}})
+- **GPS:** {{ramps["milford_south_ramp"].gps}}
+
+**[See the full schedule here](/tournaments/mlts/schedule)**
 
 ---
 

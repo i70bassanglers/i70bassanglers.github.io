@@ -1,7 +1,14 @@
 {
     "milford_south_ramp":{
         "name":"South Boat Ramp",
-        "address":"TDB",
-        "gps":"TDB"
+        "address":"South Boat Ramp, Milford, KS 66514",
+        "gmaps":"https://maps.app.goo.gl/AuMvWwFzHdWbyrxT6",
+        "gps":"39.093767,-96.902395"
+    },
+    "cgcl_ramp":{
+        "name":"Park Cir Ramp",
+        "address":"141 Park Cir, Council Grove, KS 66846",
+        "gmaps":"https://maps.app.goo.gl/HgYteWKPZC6hgHJ56",
+        "gps":"38.6822883,-96.5574472"
     }
 }

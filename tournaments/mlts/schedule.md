@@ -5,18 +5,19 @@ description: "Milford Lake Team Series tournament schedule, results, and informa
 ---
 
 ### {{site.year}} Tournament Schedule
+All tournaments are held at Milford Lake.
 
-| Date | Lake | Results |
-|------|------|------|
+| Date | Results |
+|------|------|
 {%- for tournament in mlts_tournaments.tournaments %}
 {%- case tournament.status %}
 {%- when "scheduled" %}
-| {{tournament.date}} | {{tournament.lake}} | TDB |
+| {{tournament.date}} | TDB |
 {%- when "rescheduled" %}
-| ~~{{tournament.date}}~~ | ~~{{tournament.lake}}~~ | Rescheduled |
+| ~~{{tournament.date}}~~ | Rescheduled |
 {%- when "complete" %}
 {%- assign date_slug = tournament.date | replace: '/', '_' | downcase %}
-| {{tournament.date}} | {{tournament.lake}} | [Results]({{ "/tournaments/mlts/results/" | append: date_slug | url }}) |
+| {{tournament.date}} | [Results]({{ "/tournaments/mlts/results/" | append: date_slug | url }}) |
 {%- endcase %}
 {%- endfor %}
 

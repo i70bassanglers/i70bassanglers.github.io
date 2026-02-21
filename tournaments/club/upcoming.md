@@ -15,8 +15,11 @@ description: "Next I-70 Bass Anglers club tournaments, registration details, and
 
 **Location & Directions:**
 - **Launch:** {{ramps[tournaments.next.ramp].name}}
-- **Address:** {{ramps[tournaments.next.ramp].address}}
+- **Address:** [{{ramps[tournaments.next.ramp].address}}]({{ramps[tournaments.next.ramp].gmaps}})
 - **GPS:** {{ramps[tournaments.next.ramp].gps}}
+
+**[See the full schedule here](/tournaments/club/schedule)**
+
 ---
 ### New Member Welcome
 
