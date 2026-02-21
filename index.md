@@ -15,7 +15,7 @@ The I-70 Bass Anglers is the premier bass fishing club serving the I-70 corridor
 ### What We Offer
 
 - **Competitive Tournaments** - Monthly club tournaments with prizes and points standings
-- **Milford Lake Team Series** - I70 Bass Anglers is the host to the the Milford Lake Tournament Series 
+- **Milford Lake Team Series** - I70 Bass Anglers is the host to the the [Milford Lake Tournament Series](/tournaments/mlts) 
 - **Camaraderie** - Build friendships with fellow bass fishing enthusiasts
 - **Education** - Learn new techniques and strategies from experienced anglers
 
