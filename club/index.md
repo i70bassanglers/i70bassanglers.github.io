@@ -23,7 +23,7 @@ Our club consists of passionate bass anglers who compete in monthly tournaments 
 ### Meeting Information
 
 **Monthly Meetings:** First Thursday of every month at 7:00 PM  
-**Location:** Pizza Hut, 412 E Chestnut St, Junction City, KS 66441  
+**Location:** Conference Center at Acorns Resort. 3710 Farnum Creek Road, Milford, Kansas  
 **What We Cover:**  
 - Tournament results and standings
 - Upcoming tournament details
@@ -43,6 +43,6 @@ Our club consists of passionate bass anglers who compete in monthly tournaments 
 
 For more information about joining or participating in club activities:
 
-- **Email:** {{ site.email }}
+- **Email:** {{ contact.email }}
 - **Meetings:** First Thursday monthly, 7:00 PM
 - **Season:** March through October
