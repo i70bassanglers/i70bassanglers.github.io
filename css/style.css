@@ -22,7 +22,7 @@
      ============================================= */
   --header-photo: url('/images/launch.jpg');
   --header-pos-x: center;
-  --header-pos-y: 50%;
+  --header-pos-y: 55%;
 }
 
 /* Base Styles */
@@ -158,6 +158,8 @@ a:hover {
 .main-nav {
   margin-left: auto;
   flex-shrink: 0;
+  align-self: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .main-nav ul {
