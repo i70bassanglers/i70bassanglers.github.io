@@ -28,3 +28,5 @@ Whether you're a seasoned tournament angler or just getting started in bass fish
 ### Our Sponsors
 
 We're proud to be supported by local businesses and national fishing industry leaders. [View our sponsors](/sponsors/) and show them your support.
+
+
