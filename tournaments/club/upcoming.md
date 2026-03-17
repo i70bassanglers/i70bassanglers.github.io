@@ -9,14 +9,18 @@ description: "Next I-70 Bass Anglers club tournaments, registration details, and
 
 **Tournament Details:**
 - **Date:** {{ tournaments.next.formattedDate }}
-- **Check-In:** {{tournaments.next.checkin}}
-- **Estimated Tournament Hours:** {{tournaments.next.estimated_safe_light}} to {{tournaments.next.weighin}}
+- **Check-In:** {% if tournaments.next.checkin %}{{tournaments.next.checkin}}{% else %}TBD{% endif %}
+- **Estimated Tournament Hours:** {% if tournaments.next.estimated_safe_light and tournaments.next.estimated_safe_light != "TBD" %}{{tournaments.next.estimated_safe_light}} to {{tournaments.next.weighin}}{% else %}TBD{% endif %}
 - **Entry Fee:** $50 per angler
 
 **Location & Directions:**
+{% if tournaments.next.ramp and tournaments.next.ramp != "TBD" %}
 - **Launch:** {{ramps[tournaments.next.ramp].name}}
 - **Address:** [{{ramps[tournaments.next.ramp].address}}]({{ramps[tournaments.next.ramp].gmaps}})
 - **GPS:** {{ramps[tournaments.next.ramp].gps}}
+{% else %}
+- **Launch:** TBD
+{% endif %}
 
 **[See the full schedule here](/tournaments/club/schedule)**
 
