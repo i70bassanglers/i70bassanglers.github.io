@@ -10,8 +10,8 @@ The I-70 Bass Anglers proudly hosts the Milford Lake Team Series. The MLTS is a 
 #### **Contact Information**
 
 **Tournament Director:** {{ club_officers.mlts_tournament_director.name }}
-- **Email:** {{ contact.email }}
-- **Phone:** {{ contact.phone }}
+- **Email:** {{ contact.mlts.email }}
+- **Phone:** {{ contact.mlts.phone }}
 
 ### Quick Links
 

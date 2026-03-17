@@ -35,7 +35,9 @@ Tournaments proceed in most weather conditions. Cancellations or delays will be 
 - **Via:** Email, club website, phone tree
 - **Makeup:** Rescheduled at next club meeting, when possible
 
-**Contact Tournament Director: Kelly Ross**
-- **Email:** {{ contact.email }}
+#### Contact Information
+**Tournament Director: {{ club_officers.tournament_director.name }}**
+- **Email:** {{ contact.club.email }}
+- **Phone:** {{ contact.club.phone }}
 
 Ready to join our tournament series? [Contact us](/club/organization/) for membership information or check our [upcoming tournaments](/tournaments/club/upcoming/) for the next competition!

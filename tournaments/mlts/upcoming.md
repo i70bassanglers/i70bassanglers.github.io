@@ -23,6 +23,6 @@ description: "Next Milford Lake Teams Series event for Kansas anglers."
 ### Contact Information
 
 **Tournament Director:** {{club_officers.tournament_director.name}}
-- **Email:** {{ contact.email }}
+- **Email:** {{ contact.club.email }}
 
-Ready to fish with us? [Contact the Tournament Director](mailto:{{ contact.email }}) to get registered for the next tournament!
+Ready to fish with us? [Contact the Tournament Director](mailto:{{ contact.club.email }}) to get registered for the next tournament!

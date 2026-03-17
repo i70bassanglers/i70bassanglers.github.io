@@ -43,6 +43,6 @@ Our club consists of passionate bass anglers who compete in monthly tournaments 
 
 For more information about joining or participating in club activities:
 
-- **Email:** {{ contact.email }}
+- **Email:** {{ contact.club.email }}
 - **Meetings:** First Thursday monthly, 7:00 PM
 - **Season:** March through October
