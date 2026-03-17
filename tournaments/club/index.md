@@ -9,6 +9,7 @@ Boaters and Co-Anglers are paired up through a random drawing held at the meetin
 
 Tournament results are tallied each month as members individually compete for Angler of the Year and Co-Angler of the Year.
 The top Anglers and Co-Anglers qualify for the annual no-entry-fee Club Classic.
+
 ---
 ### Tournament Information
 
