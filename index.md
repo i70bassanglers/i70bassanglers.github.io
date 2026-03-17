@@ -4,7 +4,9 @@ title: "Welcome to I-70 Bass Anglers"
 description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 corridor region. Join us for competitive tournaments and camaraderie."
 ---
 
-The I-70 Bass Anglers is the premier bass fishing club serving the I-70 corridor region. Since our founding as FROGs in {{ site.founded }}, we've been dedicated to promoting the sport of bass fishing through competitive tournaments and building lasting friendships among anglers.
+The I-70 Bass Anglers is the premier bass fishing club serving the I-70 corridor region. Since our founding as FROGGZ, we've been dedicated to promoting the sport of bass fishing through competitive tournaments and building lasting friendships among anglers. We are a small but very motivated group of individuals who share the love of fishing and hope to teach both young and old about efforts to ensure that there will be enough of our sport to partake of for generations to come. 
+
+Come join us out on the water! Tight lines!!
 
 ### Upcoming Events
 

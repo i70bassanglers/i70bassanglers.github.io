@@ -4,8 +4,11 @@ title: "Club Tournaments"
 description: "I-70 Bass Anglers club tournament schedule, results, and information."
 ---
 
-The I-70 Bass Anglers holds monthly tournaments from March through November, fishing some of the best bass waters in Kansas. Our tournament series awards points throughout the season, culminating in our annual Club Championship.
+The I-70 Bass Anglers holds monthly tournaments for active club members from March through November, fishing some of the best bass waters in Kansas. 
+Boaters and Co-Anglers are paired up through a random drawing held at the meeting prior to the month's tournament and compete as a team. 
 
+Tournament results are tallied each month as members individually compete for Angler of the Year and Co-Angler of the Year.
+The top Anglers and Co-Anglers qualify for the annual no-entry-fee Club Classic.
 ---
 ### Tournament Information
 
@@ -40,4 +43,4 @@ Tournaments proceed in most weather conditions. Cancellations or delays will be 
 - **Email:** {{ contact.club.email }}
 - **Phone:** {{ contact.club.phone }}
 
-Ready to join our tournament series? [Contact us](/club/organization/) for membership information or check our [upcoming tournaments](/tournaments/club/upcoming/) for the next competition!
+Ready to join our tournament series? Contact us for membership information or check our [upcoming tournaments](/tournaments/club/upcoming/) for the next competition!
