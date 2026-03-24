@@ -21,6 +21,11 @@ function formatDateUS(dateObj) {
   });
 }
 
+// Convert a MM/DD/YYYY date string to the results filename slug: MM_DD_YYYY
+function dateToSlug(dateStr) {
+  return (dateStr || "").replace(/\//g, "_").toLowerCase();
+}
+
 // Shift a time string like "7:30AM" or "6:00PM" by offsetMinutes
 // (positive = forward, negative = backward) and return the result in the same
 // format, or null if the input isn't a valid time or is "TBD".
@@ -53,21 +58,34 @@ function shiftTime(timeStr, offsetMinutes) {
 
 module.exports = function() {
   const csvPath = path.join(__dirname, "tournaments.csv");
+  const clubResultsDir = path.join(__dirname, "club_results");
+
+  // Build a set of dates that have a results file: "03/21/2026", etc.
+  const resultsDates = new Set(
+    fs.readdirSync(clubResultsDir)
+      .filter(f => f.endsWith(".csv"))
+      .map(f => {
+        const parts = path.basename(f, ".csv").split("_"); // ["03","21","2026"]
+        return parts.length === 3 ? `${parts[0]}/${parts[1]}/${parts[2]}` : null;
+      })
+      .filter(Boolean)
+  );
 
   return new Promise((resolve, reject) => {
     const rows = [];
 
     fs.createReadStream(csvPath)
-      .pipe(csv()) // default: headers from first row -> keys on data objects
+      .pipe(csv())
       .on("data", (data) => {
-        // csv-parser yields values as strings; keep original fields and add dateObj/formattedDate
         const dateObj = parseMmDdY((data.date || "").trim());
+        const slug = dateToSlug((data.date || "").trim());
         rows.push({
           ...data,
           dateObj,
-          formattedDate: dateObj ? formatDateUS(dateObj) : (data.date || "")
+          formattedDate: dateObj ? formatDateUS(dateObj) : (data.date || ""),
+          slug,
+          hasResults: resultsDates.has((data.date || "").trim())
         });
-
       })
       .on("end", () => {
         // sort: earliest first; rows without valid date go to the end
@@ -77,19 +95,19 @@ module.exports = function() {
           return a.dateObj - b.dateObj;
         });
 
-        // find the first tournament after today
+        // find the first tournament on or after today
         const today = new Date();
-        today.setHours(0, 0, 0, 0); // normalize to start of day
+        today.setHours(0, 0, 0, 0);
         const next = rows.find(row => row.dateObj && row.dateObj >= today);
 
-        // Derive checkin (30 min before) and weighin (8 hours after) from estimated_safe_light
+        // Derive checkin (15 min before) and weighin (8 hours after) from estimated_safe_light
         const nextWithTimes = next ? {
           ...next,
           checkin: shiftTime((next.estimated_safe_light || "").trim(), -15),
           weighin: shiftTime((next.estimated_safe_light || "").trim(), 8 * 60)
         } : null;
 
-        resolve({ 
+        resolve({
           tournaments: rows,
           next: nextWithTimes
         });

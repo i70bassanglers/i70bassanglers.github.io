@@ -15,7 +15,7 @@ eleventyComputed:
 | Team | Fish Weighed | Weight | Big Bass |
 |------|--------------|--------|----------|
 {%- for result in dateEntry.results %}
-| {{ result.angler }}{%- if result.coangler %} & {{ result.coangler }}{%- endif %} | {{ result.count }} | {{ result.weight }}lbs | {{ result.big_bass }}lbs |
+| {{ result.angler }}{%- if result.coangler %} & {{ result.coangler }}{%- endif %} | {{ result.count }} | {{ result.weight }}lbs | {%- if result.big_bass %} {{ result.big_bass }}lbs {%- else %} - {%- endif %} |
 {%- endfor %}
 
 ### Big Bass Winner

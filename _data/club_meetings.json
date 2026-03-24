@@ -1,0 +1,34 @@
+[
+  {
+    "date": "02/01/2026",
+    "attendees": [
+      "Mike Vacanti",
+      "Matt Wright",
+      "Butch Kauffman",
+      "Jesse Cornell",
+      "Rick Dykstra",
+      "Spencer Martinez",
+      "Tim Guenther",
+      "Scott Smith",
+      "Sheldon Pfizenmaier",
+      "Kelly Ross",
+      "Chris Kirkley",
+      "Sean Finegan",
+      "John Goldsmith"
+    ]
+  },
+  {
+    "date": "03/05/2025",
+    "attendees":[
+        "Butch Kauffman",
+        "Mike Vacanti",
+        "Kelly Ross",
+        "Rick Dykstra",
+        "Matt Wright",
+        "Jesse Cornell",
+        "Chris Kirkley",
+        "Trent Novelly",
+        "Jake Lantz" 
+      ]
+  }
+]

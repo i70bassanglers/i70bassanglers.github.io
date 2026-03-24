@@ -7,5 +7,17 @@
     "facebook": "https://facebook.com/i70bassanglers",
     "instagram": "https://instagram.com/i70bassanglers"
   },
-  "year": 2026
+  "year": 2026,
+  "banner": {
+    "enabled": false,
+    "message": "Schedules have been updated for the 2026 Season!"
+  },
+  "scoring": {
+    "first_place_points": 100,
+    "no_fish_points": 50,
+    "big_bass_bonus": 2,
+    "meeting_points": 1,
+    "meeting_points_cap": 4,
+    "best_tournaments_count": 5
+  }
 }

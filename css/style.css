@@ -294,6 +294,73 @@ tr:hover {
   background-color: var(--background-light);
 }
 
+/* Standings Tables */
+.standings-table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.standings-table table {
+  min-width: max-content;
+}
+
+.standings-table td,
+.standings-table th {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.standings-table td:first-child,
+.standings-table th:first-child,
+.standings-table td:nth-child(2),
+.standings-table th:nth-child(2) {
+  text-align: left;
+  position: sticky;
+}
+
+.standings-table td:first-child,
+.standings-table th:first-child {
+  left: 0;
+  min-width: 2.5rem;
+}
+
+.standings-table td:nth-child(2),
+.standings-table th:nth-child(2) {
+  left: 2.5rem;
+  min-width: 10rem;
+}
+
+.standings-table th:first-child,
+.standings-table th:nth-child(2) {
+  background-color: var(--primary-color);
+  z-index: 2;
+}
+
+.standings-table td:first-child,
+.standings-table td:nth-child(2) {
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.standings-table tr:hover td:first-child,
+.standings-table tr:hover td:nth-child(2) {
+  background-color: var(--background-light);
+}
+
+/* Dropped (non-counted) tournament score */
+td.dropped {
+  color: var(--text-light);
+  opacity: 0.45;
+  font-style: italic;
+}
+
+/* Total points column emphasis */
+td.total-pts {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
 /* Blog Post Styles
 .blog-post-preview {
   border: 1px solid var(--border-color);
