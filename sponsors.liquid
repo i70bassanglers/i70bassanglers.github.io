@@ -1,0 +1,48 @@
+---
+layout: layout.liquid
+title: "Our Sponsors"
+description: "I-70 Bass Anglers sponsors and business partners supporting our club and tournaments."
+---
+
+<p class="sponsors-intro">We are grateful for the support of our sponsors who make our club and tournaments possible. Please consider supporting the businesses that support us.</p>
+
+<div class="sponsors-grid">
+  {% for sponsor in sponsors %}
+
+    {% if sponsor.layout == "logo-link" %}
+      {% if sponsor.cropMiddle %}
+        <div class="sponsor-card sponsor-card--logo-crop">
+          <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link sponsor-logo-link--crop" aria-label="{{ sponsor.name }}">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo-crop-img">
+          </a>
+        </div>
+      {% else %}
+        <div class="sponsor-card sponsor-card--logo-crop">
+          <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link sponsor-logo-link--fit"
+             style="background-image: url('{{ sponsor.logo }}');" aria-label="{{ sponsor.name }}">
+          </a>
+        </div>
+      {% endif %}
+
+    {% elsif sponsor.layout == "name-only" %}
+      <div class="sponsor-card sponsor-card--no-logo">
+        <a href="{{ sponsor.mapsUrl }}" target="_blank" rel="noopener noreferrer" class="sponsor-name-link">
+          <div class="sponsor-sign-name">
+            <span class="sponsor-sign-block">WALSH</span><span class="sponsor-sign-cursive">Customs</span>
+          </div>
+          <span class="sponsor-sign-tagline">Auto Body Repair and Customization</span>
+          <span class="sponsor-map-link">📍 View on Google Maps</span>
+        </a>
+      </div>
+
+    {% elsif sponsor.layout == "side-logo" %}
+      <div class="sponsor-card sponsor-card--side-logo">
+        <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-side-link">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo--side">
+          <h2>{{ sponsor.name }}</h2>
+        </a>
+      </div>
+
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Handy's",
+    "logo": "/images/sponsors/Handys-Logo.png",
+    "website": "https://handysjc.com/",
+    "layout": "logo-link",
+    "cropMiddle": true
+  },
+  {
+    "name": "Walsh Customs",
+    "mapsUrl": "https://maps.app.goo.gl/JV8K3z8QXJjSTYfx6",
+    "layout": "name-only"
+  },
+  {
+    "name": "Mike Bean Agency LLC",
+    "logo": "/images/sponsors/mikebean_shelterinsurance.svg",
+    "website": "https://www.shelterinsurance.com/mbean",
+    "layout": "side-logo"
+  }
+]
