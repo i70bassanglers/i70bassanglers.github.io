@@ -29,7 +29,7 @@ description: "Leadership structure, officers, and organizational details of I-70
 *Serving since {{ club_officers.tournament_director.year }}*
 - **Responsibilities:** Tournament scheduling, rules enforcement, scoring
 
-## Assistant Tournament Directory
+## Assistant Tournament Director
 **{{ club_officers.asst_tournament_director.name }}**
 *Serving since {{ club_officers.asst_tournament_director.year }}*
 - **Responsibilities:** Tournament scheduling, rules enforcement, scoring
