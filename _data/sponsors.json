@@ -1,5 +1,11 @@
 [
   {
+    "name": "Acorns Resort",
+    "logo": "/images/sponsors/Acorns_Logo.png",
+    "website": "https://www.acornsresortkansas.com/",
+    "layout": "logo-link"
+  },
+  {
     "name": "Handy's",
     "logo": "/images/sponsors/Handys-Logo.png",
     "website": "https://handysjc.com/",
