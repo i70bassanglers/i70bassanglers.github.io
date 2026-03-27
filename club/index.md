@@ -4,11 +4,18 @@ title: "About I-70 Bass Anglers"
 description: "Learn about the I-70 Bass Anglers club history, organization, and membership."
 ---
 
-The I-70 Bass Anglers is a premier bass fishing club serving the I-70 corridor region of Kansas. We are dedicated to promoting competitive bass fishing while maintaining the highest standards of sportsmanship.
-
-### Club Overview
-
-Our club consists of passionate bass anglers who compete in monthly tournaments throughout the fishing season. We fish a variety of lakes and reservoirs in northeastern Kansas, always seeking the best bass fishing opportunities. I-70 Bass Anglers welcomes anglers of all skill levels who share our passion for bass fishing.
+<section class="home-about">
+  <div class="home-about-text">
+    <h2 class="home-about-title">Founded as FROGGZ &mdash; still fishing strong</h2>
+    <p class="home-about-body">We're a small but passionate group dedicated to competitive bass fishing and making sure the sport thrives for generations to come. Whether you're a seasoned tournament angler or just getting started, you're welcome on the water with us.</p>
+  </div>
+  <div class="home-about-meta">
+    <div class="home-meta-item">
+      <span class="home-meta-label">Follow us</span>
+      <span class="home-meta-value"><a href="https://facebook.com/I70.Bass.Anglers">Facebook</a></span>
+    </div>
+  </div>
+</section>
 
 ### What Sets Us Apart
 

@@ -1,4 +1,8 @@
 module.exports = function(eleventyConfig) {
+  // Exclude docs-only files from build output
+  eleventyConfig.ignores.add("CLAUDE.md");
+  eleventyConfig.ignores.add("README.md");
+
   // Copy assets directly to output
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("CNAME");

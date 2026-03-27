@@ -3,135 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to I-70 Bass Anglers - I-70 Bass Anglers</title>
+    <title>I-70 Bass Anglers</title>
     <meta name="description" content="I-70 Bass Anglers - Premier bass fishing club serving the I-70 corridor region. Join us for competitive tournaments and camaraderie.">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="site-logo">
-                    <a href="/">
-                        <img src="/images/i70-image.png" alt="I-70 Bass Anglers" class="logo-image">
-                    </a>
-                </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="/" class="active">Home</a></li>
-                        <li class="dropdown">
-                            <a href="/tournaments/club/">Club Tournaments</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/tournaments/club/schedule/">Schedule</a></li>
-                                <li><a href="/tournaments/club/upcoming/">Upcoming</a></li>
-                                <li><a href="/tournaments/club/results/">Results</a></li>
-                                <li><a href="/tournaments/club/standings/">Standings</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="/tournaments/mlts/">MLTS Tournaments</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/tournaments/mlts/schedule/">Schedule</a></li>
-                                <li><a href="/tournaments/mlts/upcoming/">Upcoming</a></li>
-                                <li><a href="/tournaments/mlts/results/">Results</a></li>
-                                <li><a href="/tournaments/mlts/standings/">Standings</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/sponsors/">Sponsors</a></li>
-                        <li class="dropdown">
-                            <a href="/club/">About</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/club/history/">History</a></li>
-                                <li><a href="/club/organization/">Organization</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+<body class="page-home">
+    
 
     
 
     <main class="main-content">
         <div class="container">
             
-            <h1 class="page-title">Welcome to I-70 Bass Anglers</h1>
-            
 
-            <p>I-70 Bass Anglers is a grassroots bass fishing club serving the I-70 corridor in northeast Kansas.</p>
-<p>Since our founding as FROGGZ, we've been dedicated to promoting the sport of bass fishing through competitive tournaments and building lasting friendships among anglers.</p>
-<p>We are a small but very motivated group of individuals who share the love of fishing and hope to teach both young and old about efforts to ensure that there will be enough of our sport to partake of for generations to come.</p>
-<p>Come join us out on the water! Tight lines!!</p>
-<h3>Upcoming Events</h3>
-<div class="upcoming-events">
-  <a href="/tournaments/club/upcoming/" class="upcoming-event">
-    <p><strong>April 18, 2026 - Glen Elder</strong></p>
-    <h4>Club Tournament</h4>
+            <section class="home-hero">
+  <div class="hero-inner">
+    <div class="hero-logo">
+      <a href="/">
+        <img src="/images/i70-image.png" alt="I-70 Bass Anglers" class="logo-image">
+      </a>
+    </div>
+    <div class="hero-text">
+      <p class="hero-eyebrow">Northeast Kansas &middot; I-70 Corridor</p>
+      <p class="hero-sub">A grassroots bass fishing club built on tight lines, good company, and a love of bass fishing — from the reservoir to the tournament weigh-in.</p>
+    </div>
+  </div>
+</section>
+<section class="home-features">
+  <a href="/tournaments/club/" class="home-feature-card">
+    <h3 class="home-feature-title">Club Tournaments</h3>
+    <p class="home-feature-desc">Monthly tournaments with prize payouts and a season-long points chase. Schedule, results, and standings all in one place.</p>
+    <span class="home-feature-link">Schedule &amp; Results &rarr;</span>
   </a>
-  <a href="/tournaments/mlts/upcoming" class="upcoming-event">
-    <p><strong>April 25, 2026</strong></p>
-    <h4>MLTS Tournament</h4>
+  <a href="/tournaments/mlts/" class="home-feature-card">
+    <h3 class="home-feature-title">Milford Lake Team Series</h3>
+    <p class="home-feature-desc">I-70 Bass Anglers hosts the MLTS — a team format series on one of northeast Kansas's premier bass fisheries.</p>
+    <span class="home-feature-link">MLTS Info &amp; Standings &rarr;</span>
   </a>
+  <div class="home-feature-card">
+    <h3 class="home-feature-title">Monthly Meetings</h3>
+    <p class="home-feature-desc">1st Thursday at 7:00pm</p>
+    <div class="home-meta-item">
+      <span class="home-meta-label">Location</span>
+      <span class="home-feature-desc">Acorns Resort &middot; Milford, KS</span>
+    </div>
+    <p class="home-feature-desc">All are welcome.</p>
+  </div>
+</section>
+<section class="home-events-bar">
+  <a href="/tournaments/club/upcoming/" class="home-event-cell">
+    <p class="home-event-label">Next Club Tournament</p>
+    <p class="home-event-date">April 18, 2026</p>
+    <p class="home-event-sub">Glen Elder</p>
+  </a>
+  <a href="/tournaments/mlts/upcoming/" class="home-event-cell">
+    <p class="home-event-label">Next MLTS Tournament</p>
+    <p class="home-event-date">April 25, 2026</p>
+    <p class="home-event-sub">Milford Lake Team Series</p>
+  </a>
+</section>
+<div class="home-bridge">
+  <span class="home-bridge-label">Results &amp; Standings</span>
 </div>
-<hr>
-<h3>What We Offer</h3>
-<ul>
-<li><strong>Competitive Tournaments</strong> - Monthly club tournaments with prizes and points standings</li>
-<li><strong>Milford Lake Team Series</strong> - I70 Bass Anglers is the host to the the <a href="/tournaments/mlts">Milford Lake Tournament Series</a></li>
-<li><strong>Camaraderie</strong> - Build friendships with fellow bass fishing enthusiasts</li>
-<li><strong>Education</strong> - Learn new techniques and strategies from experienced anglers</li>
-</ul>
-<h3>Join Us</h3>
-<p>Whether you're a seasoned tournament angler or just getting started in bass fishing, the I-70 Bass Anglers welcomes you. We fish lakes throughout northeast Kansas along the I-70 corridor and are always looking for new members who share our passion for bass fishing.</p>
-<p><a href="/club/organization/">Learn more about our club organization</a> or check out our <a href="/tournaments/club/upcoming/">upcoming tournaments</a>.</p>
-<h3>Meeting Information</h3>
-<p><strong>Monthly Meetings:</strong> First Thursday of every month at 7:00 PM<br>
-<strong>Location:</strong> Conference Center at Acorns Resort. 3710 Farnum Creek Road, Milford, Kansas<br>
-<strong>What We Cover:</strong></p>
-<ul>
-<li>Tournament results and standings</li>
-<li>Upcoming tournament details</li>
-<li>General club business</li>
-</ul>
-<h3>Our Sponsors</h3>
-<p>We're proud to be supported by local businesses. <a href="/sponsors/">View our sponsors</a> and show them your support.</p>
+<section class="home-quicklinks-bar">
+  <a href="/tournaments/club/results/" class="home-quicklink-cell">
+    <p class="home-quicklink-label">Latest Results</p>
+    <p class="home-quicklink-date">March 21, 2026</p>
+    <p class="home-quicklink-sub">Council Grove City Lake</p>
+  </a>
+  <a href="/tournaments/club/standings/" class="home-quicklink-cell">
+    <p class="home-quicklink-label">Season Standings</p>
+    <p class="home-quicklink-date">Angler &amp; Co-Angler Points</p>
+  </a>
+</section>
+<section class="home-sponsors-bar">
+  <span class="home-sponsors-label">Proud Sponsors</span>
+  <div class="home-sponsors-pills">
+    <span class="home-sponsor-pill">Acorns Resort</span>
+    <span class="home-sponsor-pill">Handy's</span>
+    <span class="home-sponsor-pill">Walsh Customs</span>
+    <span class="home-sponsor-pill">Mike Bean Agency LLC</span>
+  </div>
+  <a href="/sponsors/" class="home-sponsors-more">View all sponsors &rarr;</a>
+</section>
+<section class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <p class="home-footer-name">I-70 Bass Anglers</p>
+      <p class="home-footer-tagline">Northeast Kansas &middot; I-70 Corridor</p>
+    </div>
+    <div class="home-footer-contact">
+      <a href="mailto:i70bassanglers@gmail.com">i70bassanglers@gmail.com</a>
+      <span class="home-footer-sep">&middot;</span>
+      <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a>
+    </div>
+    <p class="home-footer-copy">&copy; 2026 I-70 Bass Anglers. All rights reserved.</p>
+  </div>
+</section>
 
         </div>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>I-70 Bass Anglers</h3>
-                    <p>Premier bass fishing club serving the I-70 corridor region.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="/club/">About Us</a></li>
-                        <li><a href="/tournaments/club/">Tournaments</a></li>
-                        <li><a href="/sponsors/">Our Sponsors</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li>Email: <a href="mailto:i70bassanglers@gmail.com">i70bassanglers@gmail.com</a></li>
-                        <p>Follow us on <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a> for updates</p>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>I-70 Bass Anglers</h3>
+                <p>Premier bass fishing club serving the I-70 corridor region.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 I-70 Bass Anglers. All rights reserved.</p>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/club/">About Us</a></li>
+                    <li><a href="/tournaments/club/">Tournaments</a></li>
+                    <li><a href="/sponsors/">Our Sponsors</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Email: <a href="mailto:i70bassanglers@gmail.com">i70bassanglers@gmail.com</a></li>
+                    <p>Follow us on <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a> for updates</p>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 I-70 Bass Anglers. All rights reserved.</p>
         </div>
     </footer>
     

@@ -99,6 +99,7 @@ module.exports = function() {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         const next = rows.find(row => row.dateObj && row.dateObj >= today);
+        const prev = rows.find(row => row.dateObj && row.dateObj < today);
 
         // Derive checkin (15 min before) and weighin (8 hours after) from estimated_safe_light
         const nextWithTimes = next ? {
@@ -109,7 +110,8 @@ module.exports = function() {
 
         resolve({
           tournaments: rows,
-          next: nextWithTimes
+          next: nextWithTimes,
+          prev: prev
         });
       })
       .on("error", (err) => {
