@@ -12,13 +12,24 @@ body.page-club-tournaments .site-footer { display: none; }
 
 /* ---- Hero ---- */
 .ct-hero {
+  position: relative;
+  color: var(--white);
+}
+
+/* Background photo + fade on a pseudo-element so the mask never clips the mobile nav */
+.ct-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background:
     linear-gradient(rgba(35, 48, 80, 0.65), rgba(35, 48, 80, 0.65)),
     var(--header-photo) var(--header-pos-x) var(--header-pos-y) / cover no-repeat;
-  color: var(--white);
   -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  z-index: 0;
 }
+
+.ct-hero-band { position: relative; z-index: 1; }
 
 /* Inner band: constrains hero content to page width, centers on wide screens */
 .ct-hero-band {
