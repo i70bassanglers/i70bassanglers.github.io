@@ -390,6 +390,7 @@ a.ct-schedule-row--done { cursor: pointer; text-decoration: none; }
 /* ---- Contact strip ---- */
 .ct-contact-strip {
   border-top: 1px solid var(--border-color);
+  margin-top: 1.5rem;
   padding: 1.5rem 0 2.5rem;
 }
 
