@@ -60,7 +60,7 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
 
 <section class="home-quicklinks-bar">
   <a href="/tournaments/club/results/" class="home-quicklink-cell">
-    <p class="home-quicklink-label">Latest Results</p>
+    <p class="home-quicklink-label">Latest Club Results</p>
     <p class="home-quicklink-date">{{ tournaments.prev.formattedDate }}</p>
     <p class="home-quicklink-sub">{{ tournaments.prev.lake }}</p>
   </a>

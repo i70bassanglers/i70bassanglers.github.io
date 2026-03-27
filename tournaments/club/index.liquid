@@ -18,6 +18,37 @@ hideHeader: true
 
 <div class="container">
 
+  <div class="ct-bridge"><span class="ct-bridge-label">About the Series</span></div>
+
+  <section class="ct-about">
+    <div class="ct-about-body">
+      <p>The I-70 Bass Anglers holds monthly tournaments for active club members from March through November, fishing some of the best bass waters in Kansas. Boaters and Co-Anglers are paired through a random drawing held at the meeting before each tournament &mdash; it doesn&rsquo;t matter who catches the fish, points and winnings go to the pair.</p>
+      <p>Tournament results are tallied each month as members compete individually for Angler of the Year and Co-Angler of the Year. The top finishers qualify for the annual no-entry-fee Club Classic.</p>
+      <p>New to tournament fishing? Experienced club members are ready to help you get on the water. Already experienced? We&rsquo;d love to have you join and help grow the bass fishing community along the I-70 corridor.</p>
+    </div>
+    <div class="ct-about-meta">
+      <div class="ct-about-block">
+        <p class="ct-awards-label">Season-End Awards</p>
+        <ul class="ct-awards-list">
+          <li>Angler of the Year</li>
+          <li>Co-Angler of the Year</li>
+          <li>Big Bass of the Year</li>
+          <li>Newcomer of the Year</li>
+        </ul>
+      </div>
+      <div class="ct-about-block">
+        <p class="ct-awards-label">Scoring</p>
+        <ul class="ct-awards-list">
+          <li>1st place: {{ site.scoring.first_place_points }} pts</li>
+          <li>No fish weighed: {{ site.scoring.no_fish_points }} pts</li>
+          <li>Big bass bonus: +{{ site.scoring.big_bass_bonus }} pts</li>
+          <li>Best {{ site.scoring.best_tournaments_count }} of 8 count</li>
+          <li>Meeting attendance: up to {{ site.scoring.meeting_points_cap }} pts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="ct-actions-bar">
     <a href="/tournaments/club/results/" class="ct-action-cell">
       <p class="ct-action-label">Tournament Results</p>
@@ -60,15 +91,19 @@ hideHeader: true
         <span class="ct-sched-status">Rescheduled</span>
       </div>
       {%- else %}
-      <div class="ct-schedule-row{% if tournament.hasResults %} ct-schedule-row--done{% endif %}">
+      {%- if tournament.hasResults %}
+      <a href="/tournaments/club/results/{{ tournament.slug }}/" class="ct-schedule-row ct-schedule-row--done">
         <span class="ct-sched-date">{{ tournament.formattedDate }}</span>
         <span class="ct-sched-lake">{{ tournament.lake }}</span>
-        {%- if tournament.hasResults %}
-        <a href="/tournaments/club/results/{{ tournament.slug }}/" class="ct-sched-link">Results &rarr;</a>
-        {%- else %}
+        <span class="ct-sched-link">Results &rarr;</span>
+      </a>
+      {%- else %}
+      <div class="ct-schedule-row">
+        <span class="ct-sched-date">{{ tournament.formattedDate }}</span>
+        <span class="ct-sched-lake">{{ tournament.lake }}</span>
         <span class="ct-sched-upcoming"></span>
-        {%- endif %}
       </div>
+      {%- endif %}
       {%- endcase %}
       {%- endfor %}
     </div>
@@ -108,37 +143,6 @@ hideHeader: true
     <div class="ct-info-item">
       <span class="ct-info-label">Check-In</span>
       <span class="ct-info-value">15 min before launch</span>
-    </div>
-  </section>
-
-  <div class="ct-bridge"><span class="ct-bridge-label">About the Series</span></div>
-
-  <section class="ct-about">
-    <div class="ct-about-body">
-      <p>The I-70 Bass Anglers holds monthly tournaments for active club members from March through November, fishing some of the best bass waters in Kansas. Boaters and Co-Anglers are paired through a random drawing held at the meeting before each tournament &mdash; it doesn&rsquo;t matter who catches the fish, points and winnings go to the pair.</p>
-      <p>Tournament results are tallied each month as members compete individually for Angler of the Year and Co-Angler of the Year. The top finishers qualify for the annual no-entry-fee Club Classic.</p>
-      <p>New to tournament fishing? Experienced club members are ready to help you get on the water. Already experienced? We&rsquo;d love to have you join and help grow the bass fishing community along the I-70 corridor.</p>
-    </div>
-    <div class="ct-about-meta">
-      <div class="ct-about-block">
-        <p class="ct-awards-label">Season-End Awards</p>
-        <ul class="ct-awards-list">
-          <li>Angler of the Year</li>
-          <li>Co-Angler of the Year</li>
-          <li>Big Bass of the Year</li>
-          <li>Newcomer of the Year</li>
-        </ul>
-      </div>
-      <div class="ct-about-block">
-        <p class="ct-awards-label">Scoring</p>
-        <ul class="ct-awards-list">
-          <li>1st place: {{ site.scoring.first_place_points }} pts</li>
-          <li>No fish weighed: {{ site.scoring.no_fish_points }} pts</li>
-          <li>Big bass bonus: +{{ site.scoring.big_bass_bonus }} pts</li>
-          <li>Best {{ site.scoring.best_tournaments_count }} of 8 count</li>
-          <li>Meeting attendance: up to {{ site.scoring.meeting_points_cap }} pts</li>
-        </ul>
-      </div>
     </div>
   </section>
 
