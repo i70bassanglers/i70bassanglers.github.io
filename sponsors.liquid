@@ -1,48 +1,84 @@
 ---
 layout: layout.liquid
-title: "Our Sponsors"
 description: "I-70 Bass Anglers sponsors and business partners supporting our club and tournaments."
+bodyClass: page-sponsors
+hideHeader: true
 ---
 
-<p class="sponsors-intro">We are grateful for the support of our sponsors who make our club and tournaments possible. Please consider supporting the businesses that support us.</p>
+<section class="ct-hero">
+  <div class="ct-hero-band">
+    {% include "hero-nav.liquid" %}
+    <div class="ct-hero-inner">
+      <p class="ct-hero-eyebrow">I-70 Bass Anglers</p>
+      <h1 class="ct-hero-title">Our Sponsors</h1>
+      <p class="ct-hero-sub">These businesses make our club and tournaments possible. Please support the people who support us.</p>
+    </div>
+  </div>
+</section>
 
-<div class="sponsors-grid">
-  {% for sponsor in sponsors %}
+<div class="container">
 
-    {% if sponsor.layout == "logo-link" %}
-      {% if sponsor.cropMiddle %}
-        <div class="sponsor-card sponsor-card--logo-crop">
-          <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link sponsor-logo-link--crop" aria-label="{{ sponsor.name }}">
-            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo-crop-img">
-          </a>
-        </div>
-      {% else %}
-        <div class="sponsor-card sponsor-card--logo-crop">
-          <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link sponsor-logo-link--fit"
-             style="background-image: url('{{ sponsor.logo }}');" aria-label="{{ sponsor.name }}">
-          </a>
-        </div>
-      {% endif %}
+  <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Season Sponsors</span></div>
 
-    {% elsif sponsor.layout == "name-only" %}
-      <div class="sponsor-card sponsor-card--no-logo">
-        <a href="{{ sponsor.mapsUrl }}" target="_blank" rel="noopener noreferrer" class="sponsor-name-link">
-          <div class="sponsor-sign-name">
-            <span class="sponsor-sign-block">WALSH</span><span class="sponsor-sign-cursive">Customs</span>
+  <div class="sponsors-grid">
+    {% for sponsor in sponsors %}
+
+      {% if sponsor.layout == "logo-link" %}
+        {% if sponsor.cropMiddle %}
+          <div class="sponsor-card sponsor-card--logo-crop">
+            <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link sponsor-logo-link--crop" aria-label="{{ sponsor.name }}">
+              <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo-crop-img">
+            </a>
           </div>
-          <span class="sponsor-sign-tagline">Auto Body Repair and Customization</span>
-          <span class="sponsor-map-link">📍 View on Google Maps</span>
-        </a>
-      </div>
+        {% else %}
+          <div class="sponsor-card sponsor-card--logo-crop">
+            <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-logo-link sponsor-logo-link--fit"
+               style="background-image: url('{{ sponsor.logo }}');" aria-label="{{ sponsor.name }}">
+            </a>
+          </div>
+        {% endif %}
 
-    {% elsif sponsor.layout == "side-logo" %}
-      <div class="sponsor-card sponsor-card--side-logo">
-        <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-side-link">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo--side">
-          <h2>{{ sponsor.name }}</h2>
-        </a>
-      </div>
+      {% elsif sponsor.layout == "name-only" %}
+        <div class="sponsor-card sponsor-card--no-logo">
+          <a href="{{ sponsor.mapsUrl }}" target="_blank" rel="noopener noreferrer" class="sponsor-name-link">
+            <div class="sponsor-sign-name">
+              <span class="sponsor-sign-block">WALSH</span><span class="sponsor-sign-cursive">Customs</span>
+            </div>
+            <span class="sponsor-sign-tagline">Auto Body Repair and Customization</span>
+            <span class="sponsor-map-link">📍 View on Google Maps</span>
+          </a>
+        </div>
 
-    {% endif %}
-  {% endfor %}
+      {% elsif sponsor.layout == "side-logo" %}
+        <div class="sponsor-card sponsor-card--side-logo">
+          <a href="{{ sponsor.website }}" target="_blank" rel="noopener noreferrer" class="sponsor-side-link">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo--side">
+            <h2>{{ sponsor.name }}</h2>
+          </a>
+        </div>
+
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="sponsors-cta">
+    <p class="sponsors-cta-text">Interested in sponsoring I-70 Bass Anglers?</p>
+    <a href="mailto:{{ contact.club.email }}" class="sponsors-cta-link">Get in touch &rarr;</a>
+  </div>
+
 </div>
+
+<section class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <p class="home-footer-name">I-70 Bass Anglers</p>
+      <p class="home-footer-tagline">Northeast Kansas &middot; I-70 Corridor</p>
+    </div>
+    <div class="home-footer-contact">
+      <a href="mailto:{{ contact.club.email }}">{{ contact.club.email }}</a>
+      <span class="home-footer-sep">&middot;</span>
+      <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a>
+    </div>
+    <p class="home-footer-copy">&copy; {{ site.year }} I-70 Bass Anglers. All rights reserved.</p>
+  </div>
+</section>

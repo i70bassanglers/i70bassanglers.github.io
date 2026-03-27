@@ -77,10 +77,21 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
 <section class="home-sponsors-bar">
   <span class="home-sponsors-label">Proud Sponsors</span>
   <div class="home-sponsors-pills">
-    <span class="home-sponsor-pill">Acorns Resort</span>
-    <span class="home-sponsor-pill">Handy's</span>
-    <span class="home-sponsor-pill">Walsh Customs</span>
-    <span class="home-sponsor-pill">Mike Bean Agency LLC</span>
+    <a href="/sponsors/" class="home-sponsor-pill">
+      <img src="/images/sponsors/Acorns_Logo.png" alt="Acorns Resort" class="home-sponsor-pill-logo">
+      <span>Acorns Resort</span>
+    </a>
+    <a href="/sponsors/" class="home-sponsor-pill">
+      <img src="/images/sponsors/Handys-Logo.png" alt="Handy's" class="home-sponsor-pill-logo">
+      <span>Handy's</span>
+    </a>
+    <a href="/sponsors/" class="home-sponsor-pill home-sponsor-pill--walsh">
+      <span class="home-sponsor-pill-walsh-name"><span class="walsh-block">WALSH</span><span class="walsh-cursive">Customs</span></span>
+    </a>
+    <a href="/sponsors/" class="home-sponsor-pill">
+      <img src="/images/sponsors/mikebean_shelterinsurance.svg" alt="Mike Bean Agency LLC" class="home-sponsor-pill-logo">
+      <span>Mike Bean Agency LLC</span>
+    </a>
   </div>
   <a href="/sponsors/" class="home-sponsors-more">View all sponsors &rarr;</a>
 </section>

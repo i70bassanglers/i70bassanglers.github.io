@@ -1,40 +1,35 @@
 /* I-70 Bass Anglers — Sponsors Page
    ============================================= */
 
-.sponsors-intro {
-  font-size: 1.05rem;
-  color: var(--text-light);
-  margin-bottom: 2.5rem;
-  max-width: 680px;
-  margin-inline: auto;
-  text-align: center;
-}
+/* Full-bleed layout */
+body.page-sponsors .main-content { padding-top: 0; background: #dce8f4; }
+body.page-sponsors .site-footer { display: none; }
 
+/* ---- Sponsors grid ---- */
 .sponsors-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.25rem;
   max-width: 720px;
-  margin-inline: auto;
+  margin: 0.25rem auto 0;
 }
 
 .sponsor-card {
   background: var(--white);
-  border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
-  padding: 2rem;
+  border-radius: 0.5rem;
   box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 220px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+  overflow: hidden;
 }
 
 .sponsor-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 
-.sponsor-card--logo-crop { padding: 0; overflow: hidden; }
+/* ---- Logo-only cards ---- */
+.sponsor-card--logo-crop { padding: 0; }
 
 .sponsor-logo-link--crop {
   display: block;
@@ -44,10 +39,6 @@
   background-size: 100% 300%;
   background-position: center 50%;
   transition: opacity 0.2s ease;
-}
-
-@media (max-width: 768px) {
-  .sponsor-logo-link--crop { margin-top: -31%; }
 }
 
 .sponsor-logo-link--crop:hover { opacity: 0.85; }
@@ -72,11 +63,10 @@
 
 .sponsor-logo-link--fit:hover { opacity: 0.85; }
 
+/* ---- Name-only card ---- */
 .sponsor-card--no-logo {
-  background: var(--background-light);
-  border-left: 4px solid var(--accent-color);
+  background: var(--white);
   padding: 0;
-  overflow: hidden;
 }
 
 .sponsor-name-link {
@@ -100,7 +90,8 @@
 .sponsor-sign-tagline { font-size: 0.95rem; color: var(--text-light); font-style: italic; }
 .sponsor-map-link { display: inline-block; font-size: 0.95rem; color: var(--secondary-color); font-weight: 600; }
 
-.sponsor-card--side-logo { padding: 0; overflow: hidden; }
+/* ---- Side-logo card ---- */
+.sponsor-card--side-logo { padding: 0; }
 
 .sponsor-side-link {
   display: flex;
@@ -117,3 +108,42 @@
 .sponsor-side-link:hover { opacity: 0.75; text-decoration: none; }
 .sponsor-logo--side { max-height: 140px; max-width: 140px; flex-shrink: 0; }
 .sponsor-side-link h2 { color: var(--primary-color); margin: 0; font-size: 1.75rem; }
+
+/* ---- Sponsorship CTA ---- */
+.sponsors-cta {
+  max-width: 720px;
+  margin: 1.5rem auto 3rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--white);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sponsors-cta-text {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.sponsors-cta-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sponsors-cta-link:hover { text-decoration: underline; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .sponsor-logo-link--crop { margin-top: -31%; }
+  .sponsors-cta { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}

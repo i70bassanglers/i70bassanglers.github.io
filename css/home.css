@@ -279,15 +279,52 @@ body.page-home .site-footer { display: none; }
   font-weight: 600;
 }
 
-.home-sponsors-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.home-sponsors-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
 
 .home-sponsor-pill {
   background: #f5f0e8;
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  padding: 0.3rem 0.9rem;
-  font-size: 0.95rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.45rem;
+  font-size: 0.9rem;
   color: var(--text-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.home-sponsor-pill:hover { background: #ede7db; border-color: #c8b89a; text-decoration: none; color: var(--text-dark); }
+
+.home-sponsor-pill-logo {
+  height: 22px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Walsh Customs — branded fonts, no logo */
+.home-sponsor-pill--walsh { padding: 0.3rem 0.9rem; }
+
+.home-sponsor-pill-walsh-name {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.1em;
+  line-height: 1;
+}
+
+.walsh-block {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+}
+
+.walsh-cursive {
+  font-family: 'Pacifico', cursive;
+  font-size: 0.75rem;
+  color: var(--primary-color);
 }
 
 .home-sponsors-more {
