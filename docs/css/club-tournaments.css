@@ -445,7 +445,11 @@ a.ct-schedule-row--done { cursor: pointer; text-decoration: none; }
     gap: 1.5rem;
     min-width: unset;
   }
-  .ct-contact-inner { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+  .ct-contact-inner { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+  .ct-contact-sep { display: none; }
+  .ct-contact-role { font-size: 0.85rem; }
+  .ct-contact-name { font-size: 1.15rem; }
+  .ct-contact-link { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
