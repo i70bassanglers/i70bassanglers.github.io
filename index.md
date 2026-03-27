@@ -17,6 +17,8 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
   </div>
 </section>
 
+<div class="container">
+
 <section class="home-features">
   <a href="/tournaments/club/" class="home-feature-card">
     <h3 class="home-feature-title">Club Tournaments</h3>
@@ -78,6 +80,8 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
   </div>
   <a href="/sponsors/" class="home-sponsors-more">View all sponsors &rarr;</a>
 </section>
+
+</div>
 
 <section class="home-footer">
   <div class="home-footer-inner">

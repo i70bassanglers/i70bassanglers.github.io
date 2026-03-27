@@ -1,0 +1,176 @@
+---
+layout: layout.liquid
+description: "I-70 Bass Anglers club tournament schedule, results, and information."
+bodyClass: page-club-tournaments
+hideHeader: true
+---
+
+<section class="ct-hero">
+  <div class="ct-hero-band">
+    {% include "hero-nav.liquid" %}
+    <div class="ct-hero-inner">
+      <p class="ct-hero-eyebrow">Northeast Kansas &middot; I-70 Corridor</p>
+      <h1 class="ct-hero-title">Club Tournaments</h1>
+      <p class="ct-hero-sub">Monthly bass fishing from March through November &mdash; </br> open to anglers of all experience levels.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="ct-actions-bar">
+    <a href="/tournaments/club/results/" class="ct-action-cell">
+      <p class="ct-action-label">Tournament Results</p>
+      {%- if tournaments.prev %}
+      <p class="ct-action-main">{{ tournaments.prev.formattedDate }}</p>
+      <p class="ct-action-sub">{{ tournaments.prev.lake }} &middot; Latest results</p>
+      {%- else %}
+      <p class="ct-action-main">Season Results</p>
+      <p class="ct-action-sub">Updated after each tournament</p>
+      {%- endif %}
+    </a>
+    <a href="/tournaments/club/standings/" class="ct-action-cell">
+      <p class="ct-action-label">Season Standings</p>
+      <p class="ct-action-main">{{ site.year }} Angler &amp; Co-Angler</p>
+      <p class="ct-action-sub">Points race &middot; updated after each tournament</p>
+    </a>
+  </section>
+
+  {%- if tournaments.next %}
+  <section class="ct-next-bar">
+    <a href="/tournaments/club/upcoming/" class="ct-next-cell">
+      <p class="ct-event-label">Next Tournament</p>
+      <p class="ct-event-date">{{ tournaments.next.formattedDate }}</p>
+      <p class="ct-event-sub">{{ tournaments.next.lake }}</p>
+      <span class="ct-event-arrow">Details &amp; Directions &rarr;</span>
+    </a>
+  </section>
+  {%- endif %}
+
+  <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Season Schedule</span></div>
+
+  <section class="ct-schedule">
+    <div class="ct-schedule-list">
+      {%- for tournament in tournaments.tournaments %}
+      {%- case tournament.status %}
+      {%- when "rescheduled" %}
+      <div class="ct-schedule-row ct-schedule-row--rescheduled">
+        <span class="ct-sched-date"><s>{{ tournament.formattedDate }}</s></span>
+        <span class="ct-sched-lake"><s>{{ tournament.lake }}</s></span>
+        <span class="ct-sched-status">Rescheduled</span>
+      </div>
+      {%- else %}
+      <div class="ct-schedule-row{% if tournament.hasResults %} ct-schedule-row--done{% endif %}">
+        <span class="ct-sched-date">{{ tournament.formattedDate }}</span>
+        <span class="ct-sched-lake">{{ tournament.lake }}</span>
+        {%- if tournament.hasResults %}
+        <a href="/tournaments/club/results/{{ tournament.slug }}/" class="ct-sched-link">Results &rarr;</a>
+        {%- else %}
+        <span class="ct-sched-upcoming"></span>
+        {%- endif %}
+      </div>
+      {%- endcase %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <div class="ct-bridge"><span class="ct-bridge-label">Tournament Details</span></div>
+
+  <section class="ct-info-grid">
+    <div class="ct-info-item">
+      <span class="ct-info-label">Season</span>
+      <span class="ct-info-value">March &ndash; November</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Format</span>
+      <span class="ct-info-value">Boater &amp; Co-Angler</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Tournaments</span>
+      <span class="ct-info-value">8 events + Club Classic</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Hours</span>
+      <span class="ct-info-value">Safe light to 2:00 PM</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Entry Fee</span>
+      <span class="ct-info-value">$50 per angler</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Bag Limit</span>
+      <span class="ct-info-value">5 bass &middot; 15" minimum</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Payout</span>
+      <span class="ct-info-value">Based on number of boats</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Check-In</span>
+      <span class="ct-info-value">15 min before launch</span>
+    </div>
+  </section>
+
+  <div class="ct-bridge"><span class="ct-bridge-label">About the Series</span></div>
+
+  <section class="ct-about">
+    <div class="ct-about-body">
+      <p>The I-70 Bass Anglers holds monthly tournaments for active club members from March through November, fishing some of the best bass waters in Kansas. Boaters and Co-Anglers are paired through a random drawing held at the meeting before each tournament &mdash; it doesn&rsquo;t matter who catches the fish, points and winnings go to the pair.</p>
+      <p>Tournament results are tallied each month as members compete individually for Angler of the Year and Co-Angler of the Year. The top finishers qualify for the annual no-entry-fee Club Classic.</p>
+      <p>New to tournament fishing? Experienced club members are ready to help you get on the water. Already experienced? We&rsquo;d love to have you join and help grow the bass fishing community along the I-70 corridor.</p>
+    </div>
+    <div class="ct-about-meta">
+      <div class="ct-about-block">
+        <p class="ct-awards-label">Season-End Awards</p>
+        <ul class="ct-awards-list">
+          <li>Angler of the Year</li>
+          <li>Co-Angler of the Year</li>
+          <li>Big Bass of the Year</li>
+          <li>Newcomer of the Year</li>
+        </ul>
+      </div>
+      <div class="ct-about-block">
+        <p class="ct-awards-label">Scoring</p>
+        <ul class="ct-awards-list">
+          <li>1st place: {{ site.scoring.first_place_points }} pts</li>
+          <li>No fish weighed: {{ site.scoring.no_fish_points }} pts</li>
+          <li>Big bass bonus: +{{ site.scoring.big_bass_bonus }} pts</li>
+          <li>Best {{ site.scoring.best_tournaments_count }} of 8 count</li>
+          <li>Meeting attendance: up to {{ site.scoring.meeting_points_cap }} pts</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="ct-policy-strip">
+    <span class="ct-policy-label">Weather Policy</span>
+    <span class="ct-policy-body">Tournaments proceed in most conditions. Cancellations announced via email, website, and phone tree. Makeup dates set at the next club meeting when possible.</span>
+  </div>
+
+  <section class="ct-contact-strip">
+    <div class="ct-contact-inner">
+      <span class="ct-contact-role">Tournament Director</span>
+      <span class="ct-contact-name">{{ club_officers.tournament_director.name }}</span>
+      <span class="ct-contact-sep">&middot;</span>
+      <a href="mailto:{{ contact.club.email }}" class="ct-contact-link">{{ contact.club.email }}</a>
+      <span class="ct-contact-sep">&middot;</span>
+      <a href="tel:{{ contact.club.phone }}" class="ct-contact-link">{{ contact.club.phone }}</a>
+    </div>
+  </section>
+
+</div>
+
+<section class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <p class="home-footer-name">I-70 Bass Anglers</p>
+      <p class="home-footer-tagline">Northeast Kansas &middot; I-70 Corridor</p>
+    </div>
+    <div class="home-footer-contact">
+      <a href="mailto:{{ contact.club.email }}">{{ contact.club.email }}</a>
+      <span class="home-footer-sep">&middot;</span>
+      <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a>
+    </div>
+    <p class="home-footer-copy">&copy; {{ site.year }} I-70 Bass Anglers. All rights reserved.</p>
+  </div>
+</section>
