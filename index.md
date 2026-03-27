@@ -30,7 +30,7 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
     <p class="home-feature-desc">I-70 Bass Anglers hosts the MLTS — a team format series on one of northeast Kansas's premier bass fisheries.</p>
     <span class="home-feature-link">MLTS Info &amp; Standings &rarr;</span>
   </a>
-  <div class="home-feature-card">
+  <a href="/club" class="home-feature-card">
     <h3 class="home-feature-title">Monthly Meetings</h3>
     <p class="home-feature-desc">1st Thursday at 7:00pm</p>
     <div class="home-meta-item">
@@ -38,7 +38,8 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
       <span class="home-feature-desc">Acorns Resort &middot; Milford, KS</span>
     </div>
     <p class="home-feature-desc">All are welcome.</p>
-  </div>
+    <span class="home-feature-link">About us &rarr;</span>
+  </a>
 </section>
 
 <div class="home-bridge">

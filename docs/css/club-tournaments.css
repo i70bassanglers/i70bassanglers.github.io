@@ -272,6 +272,8 @@ a.ct-schedule-row--done { cursor: pointer; text-decoration: none; }
   margin-bottom: 0.25rem;
 }
 
+.ct-info-grid--3col { grid-template-columns: repeat(3, 1fr); }
+
 .ct-info-item {
   background: var(--white);
   padding: 1rem 1.25rem;
@@ -419,6 +421,7 @@ a.ct-schedule-row--done { cursor: pointer; text-decoration: none; }
   .ct-next-cell { flex-wrap: wrap; gap: 0.5rem; }
   .ct-event-arrow { margin-left: 0; }
   .ct-info-grid { grid-template-columns: 1fr 1fr; }
+  .ct-info-grid--3col { grid-template-columns: 1fr 1fr; }
   .ct-about { flex-direction: column; gap: 1.5rem; }
   .ct-about-meta {
     border-left: none;
@@ -940,3 +943,235 @@ body.page-mlts-upcoming .site-footer,
 body.page-mlts-results .site-footer,
 body.page-mlts-results-detail .site-footer,
 body.page-mlts-standings .site-footer { display: none; }
+
+/* =============================================
+   ABOUT & OFFICERS PAGES
+   ============================================= */
+
+body.page-about .main-content { padding-top: 0; background: #dce8f4; }
+body.page-about .site-footer { display: none; }
+
+body.page-officers .main-content { padding-top: 0; background: #dce8f4; }
+body.page-officers .site-footer { display: none; }
+
+/* Monthly meetings strip — 3 cols: label | when-where | details */
+.about-meeting {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Col 1: "Meeting Info" eyebrow label */
+.about-meeting-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+  border-right: 1px solid var(--border-color);
+  background: var(--background-light);
+}
+
+.about-meeting-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* Col 2: when/where details */
+.about-meeting-when {
+  padding: 1.25rem 2rem 1.25rem 1.5rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.about-meeting-day {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 0.1rem;
+  white-space: nowrap;
+}
+
+.about-meeting-time {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.65rem;
+}
+
+.about-meeting-place {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.1rem;
+}
+
+.about-meeting-address {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Col 3: prose details */
+.about-meeting-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.25rem 1.75rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.55;
+}
+
+.about-meeting-details p { margin: 0; }
+
+@media (max-width: 760px) {
+  .about-meeting {
+    grid-template-columns: 1fr;
+  }
+  .about-meeting-tag {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.25rem;
+  }
+  .about-meeting-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+  .about-meeting-when {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem;
+  }
+  .about-meeting-details { padding: 1.25rem; }
+  .about-meeting-address { white-space: normal; }
+}
+
+/* Joining steps */
+.join-steps {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.join-step {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.25rem 1.25rem;
+  gap: 0.75rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.join-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.join-step-num {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.join-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.join-step-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.join-step-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .join-steps { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .join-steps { grid-template-columns: 1fr; }
+}
+
+/* Officers grid */
+.officers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.officer-card {
+  background: var(--white);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 1.1rem 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.officer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.officer-role {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.officer-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.officer-since {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.officer-duties {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
