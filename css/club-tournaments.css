@@ -148,7 +148,7 @@ body.page-club-tournaments .site-footer { display: none; }
 }
 
 .ct-event-label {
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-weight: 700;
@@ -920,3 +920,23 @@ body.page-ct-upcoming .site-footer { display: none; }
   .ct-upcoming-location { flex-direction: column; gap: 0.5rem; }
   .ct-upcoming-tips { grid-template-columns: 1fr; gap: 0.85rem; }
 }
+
+/* =============================================
+   MLTS PAGES — same layout pattern as club pages
+   All .ct-* component classes are shared.
+   ============================================= */
+
+body.page-mlts .main-content { padding-top: 0; background: #dce8f4; }
+body.page-mlts .site-footer { display: none; }
+
+body.page-mlts-schedule .main-content,
+body.page-mlts-upcoming .main-content,
+body.page-mlts-results .main-content,
+body.page-mlts-results-detail .main-content,
+body.page-mlts-standings .main-content { padding-top: 0; background: #dce8f4; }
+
+body.page-mlts-schedule .site-footer,
+body.page-mlts-upcoming .site-footer,
+body.page-mlts-results .site-footer,
+body.page-mlts-results-detail .site-footer,
+body.page-mlts-standings .site-footer { display: none; }

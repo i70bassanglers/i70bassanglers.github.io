@@ -41,6 +41,10 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
   </div>
 </section>
 
+<div class="home-bridge">
+  <span class="home-bridge-label">Upcoming Events</span>
+</div>
+
 <section class="home-events-bar">
   <a href="/tournaments/club/upcoming/" class="home-event-cell">
     <p class="home-event-label">Next Club Tournament</p>

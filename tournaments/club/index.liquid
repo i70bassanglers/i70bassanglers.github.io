@@ -18,13 +18,24 @@ hideHeader: true
 
 <div class="container">
 
+  {%- if tournaments.next %}
+  <section class="ct-next-bar">
+    <a href="/tournaments/club/upcoming/" class="ct-next-cell">
+      <p class="ct-event-label">Next Tournament</p>
+      <p class="ct-event-date">{{ tournaments.next.formattedDate }}</p>
+      <p class="ct-event-sub">{{ tournaments.next.lake }}</p>
+      <span class="ct-event-arrow">Details &amp; Directions &rarr;</span>
+    </a>
+  </section>
+  {%- endif %}
+
   <div class="ct-bridge"><span class="ct-bridge-label">About the Series</span></div>
 
   <section class="ct-about">
     <div class="ct-about-body">
       <p>The I-70 Bass Anglers holds monthly tournaments for active club members from March through November, fishing some of the best bass waters in Kansas. Boaters and Co-Anglers are paired through a random drawing held at the meeting before each tournament &mdash; it doesn&rsquo;t matter who catches the fish, points and winnings go to the pair.</p>
       <p>Tournament results are tallied each month as members compete individually for Angler of the Year and Co-Angler of the Year. The top finishers qualify for the annual no-entry-fee Club Classic.</p>
-      <p>New to tournament fishing? Experienced club members are ready to help you get on the water. Already experienced? We&rsquo;d love to have you join and help grow the bass fishing community along the I-70 corridor.</p>
+      <p>New to tournament fishing? Experienced club members are ready to help you get on the water. Already experienced? We&rsquo;d love to have you join and help grow the Kansas bass fishing community along the I-70 corridor.</p>
     </div>
     <div class="ct-about-meta">
       <div class="ct-about-block">
@@ -66,17 +77,6 @@ hideHeader: true
       <p class="ct-action-sub">Points race &middot; updated after each tournament</p>
     </a>
   </section>
-
-  {%- if tournaments.next %}
-  <section class="ct-next-bar">
-    <a href="/tournaments/club/upcoming/" class="ct-next-cell">
-      <p class="ct-event-label">Next Tournament</p>
-      <p class="ct-event-date">{{ tournaments.next.formattedDate }}</p>
-      <p class="ct-event-sub">{{ tournaments.next.lake }}</p>
-      <span class="ct-event-arrow">Details &amp; Directions &rarr;</span>
-    </a>
-  </section>
-  {%- endif %}
 
   <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Season Schedule</span></div>
 

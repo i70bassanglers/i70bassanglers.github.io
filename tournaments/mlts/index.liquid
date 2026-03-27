@@ -1,0 +1,179 @@
+---
+layout: layout.liquid
+description: "I-70 Bass Anglers hosts the Milford Lake Team Series — a competitive bass fishing tournament series on Kansas's premier lake."
+bodyClass: page-mlts
+hideHeader: true
+---
+
+<section class="ct-hero">
+  <div class="ct-hero-band">
+    {% include "hero-nav.liquid" %}
+    <div class="ct-hero-inner">
+      <p class="ct-hero-eyebrow">I-70 Bass Anglers &middot; Milford Lake, KS</p>
+      <h1 class="ct-hero-title">Milford Lake Team Series</h1>
+      <p class="ct-hero-sub">A competitive team bass fishing series on Kansas&rsquo;s premier lake &mdash; 90% payout every tournament.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  {%- if mlts_tournaments.next %}
+  <section class="ct-next-bar">
+    <a href="/tournaments/mlts/upcoming/" class="ct-next-cell">
+      <p class="ct-event-label">Next Tournament</p>
+      <p class="ct-event-date">{{ mlts_tournaments.next.formattedDate }}</p>
+      <p class="ct-event-sub">Milford Lake</p>
+      <span class="ct-event-arrow">Details &amp; Registration &rarr;</span>
+    </a>
+  </section>
+  {%- endif %}
+
+  <div class="ct-bridge"><span class="ct-bridge-label">About the Series</span></div>
+
+  <section class="ct-about">
+    <div class="ct-about-body">
+      <p>The I-70 Bass Anglers proudly hosts the Milford Lake Team Series, a competitive bass fishing tournament series held on Milford Lake near Junction City in Northeast Kansas. Sign up as a team and compete throughout the season for cash &mdash; 90% of entry fees go straight back to the anglers.</p>
+      <p>MLTS tournaments are open to the public. Teams compete on Milford Lake, one of Kansas&rsquo;s top bass fisheries, in single-day events throughout the spring and summer season. Individual tournament payouts are determined by the number of competing teams, with cash paid at the weigh-in.</p>
+      <p>At the end of the season, the overall Team of the Year is awarded $500 in addition to their tournament earnings. Contact the Tournament Director to get your team registered.</p>
+    </div>
+    <div class="ct-about-meta">
+      <div class="ct-about-block">
+        <p class="ct-awards-label">Season-End Awards</p>
+        <ul class="ct-awards-list">
+          <li>Team of the Year &mdash; $500</li>
+        </ul>
+      </div>
+      <div class="ct-about-block">
+        <p class="ct-awards-label">Tournament Format</p>
+        <ul class="ct-awards-list">
+          <li>Teams of two</li>
+          <li>One-day events</li>
+          <li>90% payout</li>
+          <li>Cash at weigh-in</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ct-actions-bar">
+    <a href="/tournaments/mlts/results/" class="ct-action-cell">
+      <p class="ct-action-label">Tournament Results</p>
+      {%- if mlts_results.byDate.size > 0 %}
+      {%- assign lastResult = mlts_results.byDate | last %}
+      <p class="ct-action-main">{{ lastResult.formattedDate }}</p>
+      <p class="ct-action-sub">Milford Lake &middot; Latest results</p>
+      {%- else %}
+      <p class="ct-action-main">Season Results</p>
+      <p class="ct-action-sub">Updated after each tournament</p>
+      {%- endif %}
+    </a>
+    <a href="/tournaments/mlts/standings/" class="ct-action-cell">
+      <p class="ct-action-label">Team Standings</p>
+      <p class="ct-action-main">{{ site.year }} Team of the Year</p>
+      <p class="ct-action-sub">Points race &middot; updated after each tournament</p>
+    </a>
+  </section>
+
+  <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Season Schedule</span></div>
+
+  <section class="ct-schedule">
+    <div class="ct-schedule-list">
+      {%- for tournament in mlts_tournaments.tournaments %}
+      {%- assign date_slug = tournament.date | replace: '/', '_' | downcase %}
+      {%- assign hasResults = false %}
+      {%- for dateEntry in mlts_results.byDate %}
+        {%- if dateEntry.date == tournament.date %}
+          {%- assign hasResults = true %}
+        {%- endif %}
+      {%- endfor %}
+      {%- case tournament.status %}
+      {%- when "rescheduled" %}
+      <div class="ct-schedule-row ct-schedule-row--rescheduled">
+        <span class="ct-sched-date"><s>{{ tournament.formattedDate }}</s></span>
+        <span class="ct-sched-lake">Milford Lake</span>
+        <span class="ct-sched-status">Rescheduled</span>
+      </div>
+      {%- else %}
+      {%- if hasResults %}
+      <a href="/tournaments/mlts/results/{{ date_slug }}/" class="ct-schedule-row ct-schedule-row--done">
+        <span class="ct-sched-date">{{ tournament.formattedDate }}</span>
+        <span class="ct-sched-lake">Milford Lake</span>
+        <span class="ct-sched-link">Results &rarr;</span>
+      </a>
+      {%- else %}
+      <div class="ct-schedule-row">
+        <span class="ct-sched-date">{{ tournament.formattedDate }}</span>
+        <span class="ct-sched-lake">Milford Lake</span>
+        <span class="ct-sched-upcoming"></span>
+      </div>
+      {%- endif %}
+      {%- endcase %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <div class="ct-bridge"><span class="ct-bridge-label">Tournament Details</span></div>
+
+  <section class="ct-info-grid">
+    <div class="ct-info-item">
+      <span class="ct-info-label">Location</span>
+      <span class="ct-info-value">Milford Lake, KS</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Format</span>
+      <span class="ct-info-value">Teams of Two</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Hours</span>
+      <span class="ct-info-value">Safe light &mdash; 8 hrs</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Entry Fee</span>
+      <span class="ct-info-value">$100 per team</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Payout</span>
+      <span class="ct-info-value">90% back to anglers</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Cash Paid</span>
+      <span class="ct-info-value">At the weigh-in</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Bag Limit</span>
+      <span class="ct-info-value">5 bass &middot; 15&Prime; minimum</span>
+    </div>
+    <div class="ct-info-item">
+      <span class="ct-info-label">Team of the Year</span>
+      <span class="ct-info-value">$500 award</span>
+    </div>
+  </section>
+
+  <section class="ct-contact-strip">
+    <div class="ct-contact-inner">
+      <span class="ct-contact-role">MLTS Tournament Director</span>
+      <span class="ct-contact-name">{{ club_officers.mlts_tournament_director.name }}</span>
+      <span class="ct-contact-sep">&middot;</span>
+      <a href="mailto:{{ contact.mlts.email }}" class="ct-contact-link">{{ contact.mlts.email }}</a>
+      <span class="ct-contact-sep">&middot;</span>
+      <a href="tel:{{ contact.mlts.phone }}" class="ct-contact-link">{{ contact.mlts.phone }}</a>
+    </div>
+  </section>
+
+</div>
+
+<section class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <p class="home-footer-name">I-70 Bass Anglers</p>
+      <p class="home-footer-tagline">Northeast Kansas &middot; I-70 Corridor</p>
+    </div>
+    <div class="home-footer-contact">
+      <a href="mailto:{{ contact.club.email }}">{{ contact.club.email }}</a>
+      <span class="home-footer-sep">&middot;</span>
+      <a href="https://facebook.com/I70.Bass.Anglers">Facebook</a>
+    </div>
+    <p class="home-footer-copy">&copy; {{ site.year }} I-70 Bass Anglers. All rights reserved.</p>
+  </div>
+</section>
