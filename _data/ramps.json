@@ -10,5 +10,11 @@
         "address":"141 Park Cir, Council Grove, KS 66846",
         "gmaps":"https://maps.app.goo.gl/HgYteWKPZC6hgHJ56",
         "gps":"38.6822883,-96.5574472"
+    },
+    "glen_elder":{
+      "name":"Osage Boat Ramp",
+      "address": "Northeast Ramp Closest to Dam",
+      "gmaps": "https://maps.app.goo.gl/Agqsj98qWZ9zpT2KA",
+      "gps": "39.500133333333,-98.321516666667"
     }
 }
