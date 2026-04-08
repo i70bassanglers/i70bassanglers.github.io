@@ -3,18 +3,35 @@
         "name":"South Boat Ramp",
         "address":"South Boat Ramp, Milford, KS 66514",
         "gmaps":"https://maps.app.goo.gl/AuMvWwFzHdWbyrxT6",
-        "gps":"39.093767,-96.902395"
+        "gps":"39.093767,-96.902395",
+        "image": "/images/lakes/milford.png"
     },
     "cgcl_ramp":{
         "name":"Park Cir Ramp",
         "address":"141 Park Cir, Council Grove, KS 66846",
         "gmaps":"https://maps.app.goo.gl/HgYteWKPZC6hgHJ56",
-        "gps":"38.6822883,-96.5574472"
+        "gps":"38.6822883,-96.5574472",
+        "image": "/images/lakes/cgcl.png"
     },
     "glen_elder":{
       "name":"Osage Boat Ramp",
       "address": "Northeast Ramp Closest to Dam",
       "gmaps": "https://maps.app.goo.gl/Agqsj98qWZ9zpT2KA",
-      "gps": "39.500133333333,-98.321516666667"
+      "gps": "39.500133333333,-98.321516666667",
+      "image": "/images/lakes/glen_elder.png"
+    },
+    "hell_creek":{
+      "name":"Hell Creek Boat Ramp",
+      "address":"Wilson State Park",
+      "gmaps":"https://maps.app.goo.gl/Sj5oqyt5xFfYrPKn6",
+      "gps":"38.9247 -98.50825",
+      "image": "/images/lakes/wilson.png"
+    },
+    "perry_state":{
+      "name": "Perry State Park Boat Ramp",
+      "address": "Near Pelican Point Campground",
+      "gmaps": "https://maps.app.goo.gl/XWQ4GMY4N3G68f2b7",
+      "gps": "39.138231, -95.476367",
+      "image":"/images/lakes/perry.png"
     }
 }

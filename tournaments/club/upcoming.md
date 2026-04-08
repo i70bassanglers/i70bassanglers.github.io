@@ -68,13 +68,18 @@ templateEngineOverride: liquid
 
   {%- if tournaments.next.ramp and tournaments.next.ramp != "TBD" %}
   {%- assign ramp = ramps[tournaments.next.ramp] %}
-  <div class="ct-upcoming-location">
-    <div>
+  <div class="ct-upcoming-location-grid">
+    <div class="ct-upcoming-location">
       <p class="ct-upcoming-ramp-name">{{ ramp.name }}</p>
       <p class="ct-upcoming-ramp-address">{{ ramp.address }}</p>
       <a href="{{ ramp.gmaps }}" class="ct-upcoming-maps-link" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
       <p class="ct-upcoming-gps">GPS: {{ ramp.gps }}</p>
     </div>
+    {%- if ramp.image %}
+    <div class="ct-upcoming-location-photo">
+      <img src="{{ ramp.image }}" alt="{{ tournaments.next.lake }}" class="ct-upcoming-lake-img">
+    </div>
+    {%- endif %}
   </div>
   {%- else %}
   <div class="ct-upcoming-location-tbd">
