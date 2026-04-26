@@ -726,6 +726,8 @@ body.page-ct-standings .site-footer { display: none; }
 
 .ct-team-coangler { font-size: 0.95rem; color: var(--text-dark); display: block; }
 
+.ct-fish-penalty { font-size: 0.8rem; color: #b91c1c; display: block; }
+
 /* ---- Standings subpage ---- */
 .ct-standings-intro {
   font-size: 0.9rem;

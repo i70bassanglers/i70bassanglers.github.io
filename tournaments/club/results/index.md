@@ -58,7 +58,7 @@ templateEngineOverride: liquid
           <div class="ct-podium-item">
             <span class="ct-podium-rank ct-podium-rank--{{ forloop.index }}">{{ forloop.index }}</span>
             <span class="ct-podium-name">{{ result.angler }}{%- if result.coangler %} &amp; {{ result.coangler }}{%- endif %}</span>
-            <span class="ct-podium-detail">{{ result.count }} fish &middot; {{ result.weight }} lbs</span>
+            <span class="ct-podium-detail">{{ result.fish }} fish &middot; {{ result.final_weight }} lbs</span>
           </div>
           {%- endfor %}
         </div>

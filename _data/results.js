@@ -32,6 +32,11 @@ function formatDateUS(dateObj) {
   });
 }
 
+function normalizeName(name) {
+  if (!name) return name;
+  return name.trim().toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+}
+
 function normalizeOptionalFloat(value) {
   const trimmed = (value || "").trim();
   if (trimmed === "-" || trimmed === "") return null;
@@ -50,16 +55,19 @@ function parseCSVFile(filePath) {
       .pipe(csv())
       .on("data", (data) => {
         const rawCoangler = (data.coangler || "").trim();
-        const coangler = (rawCoangler === "-" || rawCoangler === "") ? null : rawCoangler;
+        const coangler = (rawCoangler === "-" || rawCoangler === "") ? null : normalizeName(rawCoangler);
 
         rows.push({
           ...data,
+          angler: normalizeName(data.angler),
           date: dateStr,
           dateObj,
           formattedDate,
           coangler,
-          count: parseInt(data.count, 10) || 0,
-          weight: parseFloat(data.weight) || 0,
+          fish: parseInt(data.fish, 10) || 0,
+          alive: parseInt(data.alive, 10) >= 0 ? parseInt(data.alive, 10) : parseInt(data.fish, 10) || 0,
+          penalty: normalizeOptionalFloat(data.penalty),
+          final_weight: parseFloat(data.final_weight) || 0,
           big_bass: normalizeOptionalFloat(data.big_bass)
         });
       })
@@ -94,7 +102,8 @@ function computeStandings(resultsByDate, meetings) {
   // Build meeting attendance map: name -> points (capped)
   const meetingPointsMap = {};
   meetings.forEach(meeting => {
-    (meeting.attendees || []).forEach(name => {
+    (meeting.attendees || []).forEach(raw => {
+      const name = normalizeName(raw);
       meetingPointsMap[name] = Math.min(
         (meetingPointsMap[name] || 0) + scoring.meeting_points,
         scoring.meeting_points_cap
@@ -150,7 +159,7 @@ function computeStandings(resultsByDate, meetings) {
     // Boats are already sorted by weight desc in resultsByDate
     let placementRank = 0;
     results.forEach((result) => {
-      const hasfish = result.count > 0;
+      const hasfish = result.fish > 0;
       if (hasfish) placementRank++;
 
       const placementPoints = hasfish
@@ -160,12 +169,12 @@ function computeStandings(resultsByDate, meetings) {
       const bigBassBonus = bigBassWinners.has(result.angler) ? scoring.big_bass_bonus : 0;
 
       // Award angler
-      awardPoints(anglerMap, result.angler, date, formattedDate, placementPoints, bigBassBonus, result.weight);
+      awardPoints(anglerMap, result.angler, date, formattedDate, placementPoints, bigBassBonus, result.final_weight);
       anglerMap[result.angler].tournaments.at(-1).placement = hasfish ? placementRank : null;
 
       // Award co-angler (same placement points and weight as their boat)
       if (result.coangler) {
-        awardPoints(coAnglerMap, result.coangler, date, formattedDate, placementPoints, bigBassBonus, result.weight);
+        awardPoints(coAnglerMap, result.coangler, date, formattedDate, placementPoints, bigBassBonus, result.final_weight);
         coAnglerMap[result.coangler].tournaments.at(-1).placement = hasfish ? placementRank : null;
       }
     });
@@ -234,7 +243,7 @@ module.exports = function() {
       const dateEntry = byDate[dateKey];
 
       dateEntry.results.sort((a, b) => {
-        if (b.weight !== a.weight) return b.weight - a.weight;
+        if (b.final_weight !== a.final_weight) return b.final_weight - a.final_weight;
         return (b.big_bass ?? 0) - (a.big_bass ?? 0);
       });
 

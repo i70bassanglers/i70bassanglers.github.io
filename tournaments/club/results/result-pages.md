@@ -73,8 +73,13 @@ eleventyComputed:
             <span>{{ result.angler }}</span>
             {%- if result.coangler %}<span class="ct-team-coangler">&amp; {{ result.coangler }}</span>{%- endif %}
           </td>
-          <td>{{ result.count }}</td>
-          <td>{%- if result.weight > 0 %}{{ result.weight }} lbs{%- else %}&mdash;{%- endif %}</td>
+          <td>
+            {{ result.fish }}
+            {%- if result.penalty %}
+            <span class="ct-fish-penalty">({{ result.alive }} alive, &minus;{{ result.penalty }} lbs)</span>
+            {%- endif %}
+          </td>
+          <td>{%- if result.final_weight > 0 %}{{ result.final_weight }} lbs{%- else %}&mdash;{%- endif %}</td>
           <td>{%- if result.big_bass %}{{ result.big_bass }} lbs{%- else %}&mdash;{%- endif %}</td>
         </tr>
         {%- endfor %}
