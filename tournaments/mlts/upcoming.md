@@ -62,10 +62,10 @@ templateEngineOverride: liquid
 
   <div class="ct-upcoming-location">
     <div>
-      <p class="ct-upcoming-ramp-name">{{ ramps.milford_south_ramp.name }}</p>
-      <p class="ct-upcoming-ramp-address">{{ ramps.milford_south_ramp.address }}</p>
-      <a href="{{ ramps.milford_south_ramp.gmaps }}" class="ct-upcoming-maps-link" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
-      <p class="ct-upcoming-gps">GPS: {{ ramps.milford_south_ramp.gps }}</p>
+      <p class="ct-upcoming-ramp-name">{{ ramps.milford_rush_creek.name }}</p>
+      <p class="ct-upcoming-ramp-address">{{ ramps.milford_rush_creek.address }}</p>
+      <a href="{{ ramps.milford_rush_creek.gmaps }}" class="ct-upcoming-maps-link" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      <p class="ct-upcoming-gps">GPS: {{ ramps.milford_rush_creek.gps }}</p>
     </div>
   </div>
 

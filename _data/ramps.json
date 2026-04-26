@@ -6,6 +6,13 @@
         "gps":"39.093767,-96.902395",
         "image": "/images/lakes/milford.png"
     },
+    "milford_rush_creek":{
+      "name": "Milford Lake State Park Marina - Rush Creek",
+      "address": "4312 State Park Rd, Milford, KS 66514",
+      "gmaps": "https://maps.app.goo.gl/nETaVNSzkojTQGFK9",
+      "gps": "39.115126,-96.899154",
+      "image": "/images/lakes/milford.png"
+    },
     "cgcl_ramp":{
         "name":"Park Cir Ramp",
         "address":"141 Park Cir, Council Grove, KS 66846",
