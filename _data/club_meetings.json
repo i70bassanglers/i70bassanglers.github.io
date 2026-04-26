@@ -18,7 +18,7 @@
     ]
   },
   {
-    "date": "03/05/2025",
+    "date": "03/05/2026",
     "attendees":[
         "Butch Kauffman",
         "Mike Vacanti",
@@ -30,5 +30,20 @@
         "Trent Novelly",
         "Jake Lantz" 
       ]
+  },
+  {
+    "date": "04/18/2026",
+    "attendees":[
+      "Taylor Larrabee",
+      "Matt Wright",
+      "Sheldon Pfizenmaier",
+      "Mike Vacanti",
+      "Kelly Ross",
+      "Jake Lantz",
+      "Butch Kauffman",
+      "Chris Kirkley",
+      "Talon Landreville",
+      "Trent Novelly"
+    ]
   }
 ]
