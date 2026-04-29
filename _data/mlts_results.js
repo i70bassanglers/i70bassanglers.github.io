@@ -46,23 +46,100 @@ function parseCSVFile(filePath) {
     fs.createReadStream(filePath)
       .pipe(csv())
       .on("data", (data) => {
-        // Normalize coangler: treat "-" or blank as null
-        const rawCoangler = (data.coangler || "").trim();
-        const coangler = (rawCoangler === "-" || rawCoangler === "") ? null : rawCoangler;
+        const rawFish = (data.fish || "").trim();
+        const fish = (rawFish === "-" || rawFish === "") ? null : parseInt(rawFish, 10) || null;
+
+        function parseOptionalName(val) {
+          const t = (val || "").trim();
+          return (t === "-" || t === "") ? null : t;
+        }
 
         rows.push({
           ...data,
           date: dateStr,
           dateObj,
           formattedDate,
-          coangler,
-          count: parseInt(data.count, 10) || 0,
-          weight: parseFloat(data.weight) || 0,
+          angler1: (data.angler1 || "").trim(),
+          alt1: parseOptionalName(data.alt1),
+          angler2: (data.angler2 || "").trim(),
+          alt2: parseOptionalName(data.alt2),
+          fish,
+          final_weight: parseFloat(data.final_weight) || 0,
           big_bass: normalizeOptionalFloat(data.big_bass)
         });
       })
       .on("end", () => resolve(rows))
       .on("error", reject);
+  });
+}
+
+function computeStandings(resultsByDate, scoring) {
+  const teamMap = {};
+
+  function teamKey(angler1, angler2) {
+    return `${angler1.toLowerCase()}|${angler2.toLowerCase()}`;
+  }
+
+  function ensureTeam(angler1, angler2) {
+    const key = teamKey(angler1, angler2);
+    if (!teamMap[key]) {
+      teamMap[key] = {
+        angler1,
+        angler2,
+        totalPoints: 0,
+        tiebreakerWeight: 0,
+        tournaments: []
+      };
+    }
+    return teamMap[key];
+  }
+
+  resultsByDate.forEach(dateEntry => {
+    const { date, formattedDate, results, bigBass } = dateEntry;
+
+    const bigBassWeight = bigBass ? bigBass.big_bass : null;
+    const bigBassWinners = new Set(
+      results
+        .filter(r => r.big_bass !== null && r.big_bass === bigBassWeight)
+        .map(r => teamKey(r.angler1, r.angler2))
+    );
+
+    let placementRank = 0;
+    results.forEach(result => {
+      const hasFish = result.final_weight > 0;
+      if (hasFish) placementRank++;
+
+      const placementPoints = hasFish
+        ? Math.max(scoring.first_place_points - (placementRank - 1), scoring.no_fish_points + 1)
+        : scoring.no_fish_points;
+
+      const key = teamKey(result.angler1, result.angler2);
+      const bigBassBonus = bigBassWinners.has(key) ? scoring.big_bass_bonus : 0;
+
+      const team = ensureTeam(result.angler1, result.angler2);
+      team.tournaments.push({
+        date,
+        formattedDate,
+        placement: hasFish ? placementRank : null,
+        placementPoints,
+        bigBassBonus,
+        points: placementPoints + bigBassBonus,
+        weight: result.final_weight
+      });
+    });
+  });
+
+  // Every tournament counts — sum all
+  Object.values(teamMap).forEach(team => {
+    team.totalPoints = team.tournaments.reduce((sum, t) => sum + t.points, 0);
+    team.tiebreakerWeight = Math.round(
+      team.tournaments.reduce((sum, t) => sum + t.weight, 0) * 100
+    ) / 100;
+  });
+
+  return Object.values(teamMap).sort((a, b) => {
+    if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
+    return b.tiebreakerWeight - a.tiebreakerWeight;
   });
 }
 
@@ -99,9 +176,7 @@ module.exports = function() {
       const dateEntry = byDate[dateKey];
 
       dateEntry.results.sort((a, b) => {
-        if (b.weight !== a.weight) {
-          return b.weight - a.weight;
-        }
+        if (b.final_weight !== a.final_weight) return b.final_weight - a.final_weight;
         return (b.big_bass ?? 0) - (a.big_bass ?? 0);
       });
 
@@ -119,9 +194,13 @@ module.exports = function() {
       return a.dateObj - b.dateObj;
     });
 
+    const siteConfig = require("./site.json");
+    const standings = computeStandings(resultsByDate, siteConfig.scoring);
+
     return {
       byDate: resultsByDate,
-      all: rows
+      all: rows,
+      standings
     };
   });
 };

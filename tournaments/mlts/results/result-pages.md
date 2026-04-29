@@ -31,7 +31,7 @@ eleventyComputed:
   <div class="ct-bigbass-banner">
     <div>
       <p class="ct-bigbass-banner-label">Big Bass</p>
-      <p class="ct-bigbass-banner-name">{{ dateEntry.bigBass.angler }}{%- if dateEntry.bigBass.coangler %} &amp; {{ dateEntry.bigBass.coangler }}{%- endif %}</p>
+      <p class="ct-bigbass-banner-name">{% if dateEntry.bigBass.alt1 %}{{ dateEntry.bigBass.alt1 }}{% else %}{{ dateEntry.bigBass.angler1 }}{% endif %} &amp; {% if dateEntry.bigBass.alt2 %}{{ dateEntry.bigBass.alt2 }}{% else %}{{ dateEntry.bigBass.angler2 }}{% endif %}</p>
     </div>
     <span class="ct-bigbass-banner-weight">{{ dateEntry.bigBass.big_bass }} lbs</span>
   </div>
@@ -63,11 +63,13 @@ eleventyComputed:
             {%- endif %}
           </td>
           <td>
-            <span>{{ result.angler }}</span>
-            {%- if result.coangler %}<span class="ct-team-coangler">&amp; {{ result.coangler }}</span>{%- endif %}
+            <span>{%- if result.alt1 %}{{ result.alt1 }}{%- else %}{{ result.angler1 }}{%- endif %}</span>
+            <span class="ct-mlts-angler2">&amp; {% if result.alt2 %}{{ result.alt2 }}{% else %}{{ result.angler2 }}{% endif %}</span>
+            {%- if result.alt1 %}<span class="ct-mlts-alt-note">{{ result.alt1 }} alt. for {{ result.angler1 }}</span>{%- endif %}
+            {%- if result.alt2 %}<span class="ct-mlts-alt-note">{{ result.alt2 }} alt. for {{ result.angler2 }}</span>{%- endif %}
           </td>
-          <td>{{ result.count }}</td>
-          <td>{%- if result.weight > 0 %}{{ result.weight }} lbs{%- else %}&mdash;{%- endif %}</td>
+          <td>{%- if result.fish %} {{ result.fish }}{%- else %}&mdash;{%- endif %}</td>
+          <td>{%- if result.final_weight > 0 %}{{ result.final_weight }} lbs{%- else %}&mdash;{%- endif %}</td>
           <td>{%- if result.big_bass %}{{ result.big_bass }} lbs{%- else %}&mdash;{%- endif %}</td>
         </tr>
         {%- endfor %}

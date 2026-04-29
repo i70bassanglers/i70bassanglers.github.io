@@ -725,6 +725,9 @@ body.page-ct-standings .site-footer { display: none; }
 .ct-rank-badge--3 { background: #c8a06e; color: var(--white); }
 
 .ct-team-coangler { font-size: 0.95rem; color: var(--text-dark); display: block; }
+.ct-mlts-angler2 { white-space: nowrap; }
+.ct-mlts-alt-note { font-size: 0.75rem; color: var(--text-light); display: block; font-style: italic; }
+.ct-podium-alt { font-size: 0.72rem; color: var(--text-light); font-style: italic; display: block; margin-top: 0.1rem; }
 
 .ct-fish-penalty { font-size: 0.8rem; color: #b91c1c; display: block; }
 

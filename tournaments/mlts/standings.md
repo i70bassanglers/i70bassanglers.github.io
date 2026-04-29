@@ -20,6 +20,8 @@ templateEngineOverride: liquid
 
 <div class="container">
 
+  {%- if mlts_results.standings.size == 0 %}
+
   <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Season</span></div>
   <div class="ct-empty-state">
     <p>The {{ site.year }} MLTS season is just getting started! Team standings will be updated after the first tournament.</p>
@@ -27,6 +29,52 @@ templateEngineOverride: liquid
     <p>Our next tournament: <strong>{{ mlts_tournaments.next.formattedDate }}</strong> at Milford Lake.</p>
     {%- endif %}
   </div>
+
+  {%- else %}
+
+  <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Team Standings</span></div>
+
+  <div class="ct-standings-section">
+    <p class="ct-standings-intro">All tournaments count. Tiebreaker: total weight.</p>
+    <div class="standings-table">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            {%- for dateEntry in mlts_results.byDate %}
+            <th>{{ dateEntry.formattedDate }}</th>
+            {%- endfor %}
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for team in mlts_results.standings %}
+          <tr>
+            <td>{{ forloop.index }}</td>
+            <td>{{ team.angler1 }} <span class="ct-mlts-angler2">&amp; {{ team.angler2 }}</span></td>
+            {%- for dateEntry in mlts_results.byDate %}
+              {%- assign entry = false %}
+              {%- for t in team.tournaments %}
+                {%- if t.date == dateEntry.date %}
+                  {%- assign entry = t %}
+                {%- endif %}
+              {%- endfor %}
+              {%- if entry %}
+              <td>{{ entry.points }}</td>
+              {%- else %}
+              <td>&mdash;</td>
+              {%- endif %}
+            {%- endfor %}
+            <td class="total-pts">{{ team.totalPoints }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {%- endif %}
 
 </div>
 

@@ -51,8 +51,9 @@ templateEngineOverride: liquid
           {%- for result in dateEntry.results limit:3 %}
           <div class="ct-podium-item">
             <span class="ct-podium-rank ct-podium-rank--{{ forloop.index }}">{{ forloop.index }}</span>
-            <span class="ct-podium-name">{{ result.angler }}{%- if result.coangler %} &amp; {{ result.coangler }}{%- endif %}</span>
-            <span class="ct-podium-detail">{{ result.count }} fish &middot; {{ result.weight }} lbs</span>
+            <span class="ct-podium-name">{%- if result.alt1 %}{{ result.alt1 }}{%- else %}{{ result.angler1 }}{%- endif %} &amp; {% if result.alt2 %}{{ result.alt2 }}{% else %}{{ result.angler2 }}{% endif %}</span>
+            {%- if result.alt1 or result.alt2 %}<span class="ct-podium-alt">{%- if result.alt1 %}{{ result.alt1 }} alt. for {{ result.angler1 }}{%- endif %}{%- if result.alt1 and result.alt2 %} &middot; {%- endif %}{%- if result.alt2 %}{{ result.alt2 }} alt. for {{ result.angler2 }}{%- endif %}</span>{%- endif %}
+            <span class="ct-podium-detail">{%- if result.fish %}{{ result.fish }} fish &middot; {%- endif %}{{ result.final_weight }} lbs</span>
           </div>
           {%- endfor %}
         </div>
@@ -60,7 +61,7 @@ templateEngineOverride: liquid
         <div class="ct-bigbass-pill">
           <span class="ct-bigbass-pill-label">Big Bass</span>
           <span class="ct-bigbass-pill-weight">{{ dateEntry.bigBass.big_bass }} lbs</span>
-          <span class="ct-bigbass-pill-angler">{{ dateEntry.bigBass.angler }}{%- if dateEntry.bigBass.coangler %} &amp; {{ dateEntry.bigBass.coangler }}{%- endif %}</span>
+          <span class="ct-bigbass-pill-angler">{%- if dateEntry.bigBass.alt1 %}{{ dateEntry.bigBass.alt1 }}{%- else %}{{ dateEntry.bigBass.angler1 }}{%- endif %} &amp; {% if dateEntry.bigBass.alt2 %}{{ dateEntry.bigBass.alt2 }}{% else %}{{ dateEntry.bigBass.angler2 }}{% endif %}</span>
         </div>
         {%- endif %}
       </div>
