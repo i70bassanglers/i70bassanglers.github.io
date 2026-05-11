@@ -70,8 +70,12 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
     <p class="home-quicklink-sub">{{ tournaments.prev.lake }}</p>
   </a>
   <a href="/tournaments/club/standings/" class="home-quicklink-cell">
-    <p class="home-quicklink-label">Season Standings</p>
+    <p class="home-quicklink-label">Club Season Standings</p>
     <p class="home-quicklink-date">Angler &amp; Co-Angler Points</p>
+  </a>
+  <a href="/tournaments/mlts/standings/" class="home-quicklink-cell">
+    <p class="home-quicklink-label">MLTS Season Standings</p>
+    <p class="home-quicklink-date">Team Points</p>
   </a>
 </section>
 

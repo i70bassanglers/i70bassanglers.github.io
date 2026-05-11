@@ -19,5 +19,11 @@
     "meeting_points": 1,
     "meeting_points_cap": 4,
     "best_tournaments_count": 5
+  },
+  "mlts_scoring": {
+    "first_place_points": 200,
+    "no_fish_points": 50,
+    "big_bass_bonus": 0,
+    "best_tournaments_count": 4
   }
 }

@@ -741,19 +741,23 @@ body.page-ct-standings .site-footer { display: none; }
 
 .ct-standings-section { margin-bottom: 2.5rem; }
 
-body.page-ct-standings .standings-table {
+body.page-ct-standings .standings-table,
+body.page-mlts-standings .standings-table {
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   overflow: hidden;
+  overflow-x: auto;
 }
 
-body.page-ct-standings .standings-table table {
+body.page-ct-standings .standings-table table,
+body.page-mlts-standings .standings-table table {
   margin: 0;
   border-radius: 0;
   box-shadow: none;
 }
 
-body.page-ct-standings .standings-table th {
+body.page-ct-standings .standings-table th,
+body.page-mlts-standings .standings-table th {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -763,13 +767,15 @@ body.page-ct-standings .standings-table th {
   border-bottom: none;
 }
 
-body.page-ct-standings .standings-table td {
+body.page-ct-standings .standings-table td,
+body.page-mlts-standings .standings-table td {
   padding: 0.75rem 1rem;
   border-bottom: none;
   border-top: 1px solid var(--border-color);
 }
 
-body.page-ct-standings .standings-table tbody tr:first-child td { border-top: none; }
+body.page-ct-standings .standings-table tbody tr:first-child td,
+body.page-mlts-standings .standings-table tbody tr:first-child td { border-top: none; }
 
 /* ---- Subpage responsive ---- */
 @media (max-width: 768px) {

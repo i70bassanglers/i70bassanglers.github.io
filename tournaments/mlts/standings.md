@@ -35,7 +35,7 @@ templateEngineOverride: liquid
   <div class="ct-bridge"><span class="ct-bridge-label">{{ site.year }} Team Standings</span></div>
 
   <div class="ct-standings-section">
-    <p class="ct-standings-intro">All tournaments count. Tiebreaker: total weight.</p>
+    <p class="ct-standings-intro">Best {{ site.mlts_scoring.best_tournaments_count }} of {{ mlts_results.byDate.size }} tournaments count. Dropped scores are shown in grey.</p>
     <div class="standings-table">
       <table>
         <thead>
@@ -61,7 +61,7 @@ templateEngineOverride: liquid
                 {%- endif %}
               {%- endfor %}
               {%- if entry %}
-              <td>{{ entry.points }}</td>
+              <td class="{% unless entry.counted %}dropped{% endunless %}">{{ entry.points }}</td>
               {%- else %}
               <td>&mdash;</td>
               {%- endif %}

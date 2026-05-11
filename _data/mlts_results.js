@@ -98,12 +98,6 @@ function computeStandings(resultsByDate, scoring) {
     const { date, formattedDate, results, bigBass } = dateEntry;
 
     const bigBassWeight = bigBass ? bigBass.big_bass : null;
-    const bigBassWinners = new Set(
-      results
-        .filter(r => r.big_bass !== null && r.big_bass === bigBassWeight)
-        .map(r => teamKey(r.angler1, r.angler2))
-    );
-
     let placementRank = 0;
     results.forEach(result => {
       const hasFish = result.final_weight > 0;
@@ -113,28 +107,37 @@ function computeStandings(resultsByDate, scoring) {
         ? Math.max(scoring.first_place_points - (placementRank - 1), scoring.no_fish_points + 1)
         : scoring.no_fish_points;
 
-      const key = teamKey(result.angler1, result.angler2);
-      const bigBassBonus = bigBassWinners.has(key) ? scoring.big_bass_bonus : 0;
-
       const team = ensureTeam(result.angler1, result.angler2);
       team.tournaments.push({
         date,
         formattedDate,
         placement: hasFish ? placementRank : null,
         placementPoints,
-        bigBassBonus,
-        points: placementPoints + bigBassBonus,
-        weight: result.final_weight
+        points: placementPoints,
+        weight: result.final_weight,
+        counted: true  // default; best-N rule may set to false below
       });
     });
   });
 
-  // Every tournament counts — sum all
+  // Apply best-N tournaments rule
   Object.values(teamMap).forEach(team => {
-    team.totalPoints = team.tournaments.reduce((sum, t) => sum + t.points, 0);
-    team.tiebreakerWeight = Math.round(
-      team.tournaments.reduce((sum, t) => sum + t.weight, 0) * 100
-    ) / 100;
+    const cap = scoring.best_tournaments_count;
+    const sorted = [...team.tournaments].sort((a, b) => b.points - a.points);
+    const countedDates = new Set(sorted.slice(0, cap).map(t => t.date));
+
+    let totalPoints = 0;
+    let tiebreakerWeight = 0;
+    team.tournaments.forEach(t => {
+      t.counted = countedDates.has(t.date);
+      if (t.counted) {
+        totalPoints += t.points;
+        tiebreakerWeight += t.weight;
+      }
+    });
+
+    team.totalPoints = totalPoints;
+    team.tiebreakerWeight = Math.round(tiebreakerWeight * 100) / 100;
   });
 
   return Object.values(teamMap).sort((a, b) => {
@@ -195,7 +198,7 @@ module.exports = function() {
     });
 
     const siteConfig = require("./site.json");
-    const standings = computeStandings(resultsByDate, siteConfig.scoring);
+    const standings = computeStandings(resultsByDate, siteConfig.mlts_scoring);
 
     return {
       byDate: resultsByDate,
