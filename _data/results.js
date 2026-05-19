@@ -180,6 +180,20 @@ function computeStandings(resultsByDate, meetings) {
     });
   });
 
+  // For people who fished in both roles, consolidate all entries into their primary role
+  // (the role they fished more; ties go to angler). This runs before best-N so the rule
+  // sees the full combined tournament history.
+  Object.keys(anglerMap).forEach(name => {
+    if (!coAnglerMap[name]) return;
+    if (coAnglerMap[name].tournaments.length > anglerMap[name].tournaments.length) {
+      coAnglerMap[name].tournaments.push(...anglerMap[name].tournaments);
+      delete anglerMap[name];
+    } else {
+      anglerMap[name].tournaments.push(...coAnglerMap[name].tournaments);
+      delete coAnglerMap[name];
+    }
+  });
+
   // Apply best-N tournaments rule and fold in meeting points
   const allNames = new Set([...Object.keys(anglerMap), ...Object.keys(coAnglerMap)]);
   allNames.forEach(name => {

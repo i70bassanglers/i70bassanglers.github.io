@@ -40,5 +40,11 @@
       "gmaps": "https://maps.app.goo.gl/XWQ4GMY4N3G68f2b7",
       "gps": "39.138231, -95.476367",
       "image":"/images/lakes/perry.png"
-    }
+    },
+    "melvern_west":{
+      "name": "West Boat Ramp",
+      "address": "Eisenhower State Park",
+      "gmaps": "https://maps.app.goo.gl/BiPbyvk9B4p2pg3bA",
+      "gps": "38.5224539,-95.7585299"
+  }
 }
