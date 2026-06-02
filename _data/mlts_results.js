@@ -77,7 +77,7 @@ function computeStandings(resultsByDate, scoring) {
   const teamMap = {};
 
   function teamKey(angler1, angler2) {
-    return `${angler1.toLowerCase()}|${angler2.toLowerCase()}`;
+    return [angler1, angler2].map(n => n.toLowerCase()).sort().join("|");
   }
 
   function ensureTeam(angler1, angler2) {
