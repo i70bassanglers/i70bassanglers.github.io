@@ -35,7 +35,7 @@ description: "I-70 Bass Anglers - Premier bass fishing club serving the I-70 cor
     <p class="home-feature-desc">1st Thursday at 7:00pm</p>
     <div class="home-meta-item">
       <span class="home-meta-label">Location</span>
-      <span class="home-feature-desc">Acorns Resort &middot; Milford, KS</span>
+      <span class="home-feature-desc">Kitchen at 12th Street Community Center &middot; Junction City, KS</span>
     </div>
     <p class="home-feature-desc">All are welcome.</p>
     <span class="home-feature-link">About us &rarr;</span>
