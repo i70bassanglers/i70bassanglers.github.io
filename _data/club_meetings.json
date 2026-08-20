@@ -61,5 +61,36 @@
       "Trent Novelly",
       "Mike Vacanti"
     ]
+  },
+  {
+    "date": "08/06/2026",
+    "attendees": [
+      "Mike Vacanti",
+      "Matt Wright",
+      "Tim Guenther",
+      "Rick Dykstra",
+      "Spencer Martinez",
+      "Kelly Ross",
+      "Chris Kirkley",
+      "Tony Fink",
+      "Jake Lantz",
+      "Trent Novelly"
+    ]
+  },
+  {
+    "date": "06/01/2026",
+    "attendees":
+    [
+      "Sheldon Pfizenmaier",
+      "Tim Guenther",
+      "Spencer Martinez"
+    ]
+  },
+  {
+    "date": "07/01/2026",
+    "attendees":
+    [
+      "Spencer Martinez"
+    ]
   }
 ]
