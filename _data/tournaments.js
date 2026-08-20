@@ -105,7 +105,7 @@ module.exports = function() {
         // Derive checkin (15 min before) and weighin (8 hours after) from estimated_safe_light
         const nextWithTimes = next ? {
           ...next,
-          checkin: shiftTime((next.estimated_safe_light || "").trim(), -15),
+          checkin: shiftTime((next.estimated_safe_light || "").trim(), -30),
           weighin: shiftTime((next.estimated_safe_light || "").trim(), 8 * 60)
         } : null;
 
