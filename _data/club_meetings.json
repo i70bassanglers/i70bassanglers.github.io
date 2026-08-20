@@ -28,7 +28,8 @@
         "Jesse Cornell",
         "Chris Kirkley",
         "Trent Novelly",
-        "Jake Lantz" 
+        "Jake Lantz", 
+        "Sheldon Pfizenmaier"
       ]
   },
   {
@@ -78,19 +79,36 @@
     ]
   },
   {
-    "date": "06/01/2026",
+    "date": "06/04/2026",
     "attendees":
     [
-      "Sheldon Pfizenmaier",
+      "Chris Kirkley",
+      "Matt Wright",
+      "Mike Vacanti",
+      "Kelly Ross",
+      "Scott Smith",
+      "Jake Lantz",
+      "Chris Chiodo",
+      "Tony Fink",
+      "Jared Brooks",
+      "Talon Landreville",
+      "John Goldsmith",
       "Tim Guenther",
       "Spencer Martinez"
     ]
   },
   {
-    "date": "07/01/2026",
+    "date": "06/25/2026",
     "attendees":
     [
-      "Spencer Martinez"
+      "Spencer Martinez",
+      "Sheldon Pfizenmaier",
+      "Tony Fink",
+      "Kelly Ross",
+      "Mike Vacanti",
+      "Tim Guenther",
+      "Chris Kirkley",
+      "Butch Kauffman"
     ]
   }
 ]
