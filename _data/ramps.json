@@ -31,7 +31,7 @@
       "name":"Hell Creek Boat Ramp",
       "address":"Wilson State Park",
       "gmaps":"https://maps.app.goo.gl/Sj5oqyt5xFfYrPKn6",
-      "gps":"38.9247 -98.50825",
+      "gps":"38.9247, -98.50825",
       "image": "/images/lakes/wilson.png"
     },
     "perry_state":{
@@ -45,6 +45,14 @@
       "name": "West Boat Ramp",
       "address": "Eisenhower State Park",
       "gmaps": "https://maps.app.goo.gl/BiPbyvk9B4p2pg3bA",
-      "gps": "38.5224539,-95.7585299"
-  }
+      "gps": "38.5224539,-95.7585299",
+      "image": "/images/lakes/melvern.png"
+    },
+    "eldorado":{
+      "name": "El Dorado Lake State Park Marina",
+      "address": "1000 NE Marina Rd, El Dorado, KS 67042",
+      "gmaps": "https://maps.app.goo.gl/bNXUqVRPTZsgSYb66",
+      "gps": "37.50249, -96.46472",
+      "image": "/images/lakes/eldorado.png"
+   }
 }
