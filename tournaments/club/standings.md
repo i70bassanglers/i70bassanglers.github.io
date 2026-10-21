@@ -14,7 +14,7 @@ templateEngineOverride: liquid
       <a href="/tournaments/club/" class="ct-hero-breadcrumb">&larr; Club Tournaments</a>
       <p class="ct-hero-eyebrow">{{ site.year }} Season</p>
       <h1 class="ct-hero-title">Season Standings</h1>
-      <p class="ct-hero-sub">Angler &amp; Co-Angler of the Year &mdash; best {{ site.scoring.best_tournaments_count }} of 8 tournaments count.</p>
+      <p class="ct-hero-sub">Angler &amp; Co-Angler of the Year &mdash; best {{ site.scoring.best_tournaments_count }} of {{ results.standings.countingTournamentsCount }} tournaments count. The Club Championship does not count.</p>
     </div>
   </div>
 </section>
@@ -43,7 +43,7 @@ templateEngineOverride: liquid
           <tr>
             <th>#</th>
             <th>Angler</th>
-            {%- for dateEntry in results.byDate %}
+            {%- for dateEntry in results.standings.countingDateEntries %}
             <th>{{ dateEntry.formattedDate }}</th>
             {%- endfor %}
             <th>Meetings</th>
@@ -55,7 +55,7 @@ templateEngineOverride: liquid
           <tr>
             <td>{{ forloop.index }}</td>
             <td>{{ angler.name }}</td>
-            {%- for dateEntry in results.byDate %}
+            {%- for dateEntry in results.standings.countingDateEntries %}
               {%- assign entry = false %}
               {%- for t in angler.tournaments %}
                 {%- if t.date == dateEntry.date %}
@@ -89,7 +89,7 @@ templateEngineOverride: liquid
           <tr>
             <th>#</th>
             <th>Co-Angler</th>
-            {%- for dateEntry in results.byDate %}
+            {%- for dateEntry in results.standings.countingDateEntries %}
             <th>{{ dateEntry.formattedDate }}</th>
             {%- endfor %}
             <th>Meetings</th>
@@ -101,7 +101,7 @@ templateEngineOverride: liquid
           <tr>
             <td>{{ forloop.index }}</td>
             <td>{{ coangler.name }}</td>
-            {%- for dateEntry in results.byDate %}
+            {%- for dateEntry in results.standings.countingDateEntries %}
               {%- assign entry = false %}
               {%- for t in coangler.tournaments %}
                 {%- if t.date == dateEntry.date %}

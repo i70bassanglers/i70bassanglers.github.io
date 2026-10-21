@@ -53,7 +53,7 @@ hideHeader: true
           <li>1st place: {{ site.scoring.first_place_points }} pts</li>
           <li>No fish weighed: {{ site.scoring.no_fish_points }} pts</li>
           <li>Big bass bonus: +{{ site.scoring.big_bass_bonus }} pts</li>
-          <li>Best {{ site.scoring.best_tournaments_count }} of 8 count</li>
+          <li>Best {{ site.scoring.best_tournaments_count }} of {{ tournaments.countingTournamentsCount }} count</li>
           <li>Meeting attendance: up to {{ site.scoring.meeting_points_cap }} pts</li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const csv = require("csv-parser");
+const { readSchedule, countingTournamentsCount } = require("./lib/schedule");
 
 function parseMmDdY(dateStr) {
   if (!dateStr) return null;
@@ -57,7 +57,6 @@ function shiftTime(timeStr, offsetMinutes) {
 }
 
 module.exports = function() {
-  const csvPath = path.join(__dirname, "tournaments.csv");
   const clubResultsDir = path.join(__dirname, "club_results");
 
   // Build a set of dates that have a results file: "03/21/2026", etc.
@@ -71,52 +70,46 @@ module.exports = function() {
       .filter(Boolean)
   );
 
-  return new Promise((resolve, reject) => {
-    const rows = [];
-
-    fs.createReadStream(csvPath)
-      .pipe(csv())
-      .on("data", (data) => {
-        const dateObj = parseMmDdY((data.date || "").trim());
-        const slug = dateToSlug((data.date || "").trim());
-        rows.push({
-          ...data,
-          dateObj,
-          formattedDate: dateObj ? formatDateUS(dateObj) : (data.date || ""),
-          slug,
-          hasResults: resultsDates.has((data.date || "").trim())
-        });
-      })
-      .on("end", () => {
-        // sort: earliest first; rows without valid date go to the end
-        rows.sort((a, b) => {
-          if (!a.dateObj) return 1;
-          if (!b.dateObj) return -1;
-          return a.dateObj - b.dateObj;
-        });
-
-        // find the first tournament on or after today
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const next = rows.find(row => row.dateObj && row.dateObj >= today);
-        const pastRows = rows.filter(row => row.dateObj && row.dateObj < today);
-        const prev = pastRows.length ? pastRows[pastRows.length - 1] : null;
-
-        // Derive checkin (15 min before) and weighin (8 hours after) from estimated_safe_light
-        const nextWithTimes = next ? {
-          ...next,
-          checkin: shiftTime((next.estimated_safe_light || "").trim(), -30),
-          weighin: shiftTime((next.estimated_safe_light || "").trim(), 8 * 60)
-        } : null;
-
-        resolve({
-          tournaments: rows,
-          next: nextWithTimes,
-          prev: prev
-        });
-      })
-      .on("error", (err) => {
-        reject(err);
-      });
+  // Schedule rows come from tournaments.csv (see lib/schedule.js for the
+  // Championship detection that marks the non-scoring event).
+  const rows = readSchedule().map(row => {
+    const dateObj = parseMmDdY(row.date);
+    return {
+      ...row,
+      dateObj,
+      formattedDate: dateObj ? formatDateUS(dateObj) : row.date,
+      slug: dateToSlug(row.date),
+      hasResults: resultsDates.has(row.date)
+    };
   });
+
+  // sort: earliest first; rows without valid date go to the end
+  rows.sort((a, b) => {
+    if (!a.dateObj) return 1;
+    if (!b.dateObj) return -1;
+    return a.dateObj - b.dateObj;
+  });
+
+  // find the first tournament on or after today
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const next = rows.find(row => row.dateObj && row.dateObj >= today);
+  const pastRows = rows.filter(row => row.dateObj && row.dateObj < today);
+  const prev = pastRows.length ? pastRows[pastRows.length - 1] : null;
+
+  // Derive checkin (15 min before) and weighin (8 hours after) from estimated_safe_light
+  const nextWithTimes = next ? {
+    ...next,
+    checkin: shiftTime((next.estimated_safe_light || "").trim(), -30),
+    weighin: shiftTime((next.estimated_safe_light || "").trim(), 8 * 60)
+  } : null;
+
+  return {
+    tournaments: rows,
+    next: nextWithTimes,
+    prev: prev,
+    // Events that count toward AOY / CAOY points (the Championship is excluded)
+    countingTournamentsCount: countingTournamentsCount(),
+    championshipCount: rows.filter(row => row.isChampionship).length
+  };
 };

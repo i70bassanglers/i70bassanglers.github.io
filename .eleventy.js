@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
   // Exclude docs-only files from build output
-  eleventyConfig.ignores.add("CLAUDE.md");
+  eleventyConfig.ignores.add("AGENTS.md");
   eleventyConfig.ignores.add("README.md");
 
   // Copy assets directly to output

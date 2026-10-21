@@ -4,6 +4,7 @@ const csv = require("csv-parser");
 
 const siteConfig = require("./site.json");
 const scoring = siteConfig.scoring;
+const { championshipDates, countingTournamentsCount } = require("./lib/schedule");
 
 // Derive a MM/DD/YYYY date string from a filename like "03_21_2026.csv"
 function dateFromFilename(filename) {
@@ -147,6 +148,10 @@ function computeStandings(resultsByDate, meetings) {
   resultsByDate.forEach(dateEntry => {
     const { date, formattedDate, results, bigBass } = dateEntry;
 
+    // The Club Championship does not count toward AOY / CAOY points, so its
+    // results are skipped entirely when awarding points.
+    if (dateEntry.countsForStandings === false) return;
+
     // Determine which boats get the big bass bonus (ties both get it)
     const bigBassWeight = bigBass ? bigBass.big_bass : null;
     const bigBassWinners = new Set(
@@ -227,6 +232,10 @@ module.exports = function() {
   const clubResultsDir = path.join(__dirname, "club_results");
   const meetingsPath = path.join(__dirname, "club_meetings.json");
 
+  // Dates of scheduled events that do not count toward AOY / CAOY points
+  // (the Club Championship). Dates missing from the schedule count by default.
+  const champDates = championshipDates();
+
   const csvFiles = fs.readdirSync(clubResultsDir)
     .filter(f => f.endsWith(".csv"))
     .map(f => path.join(clubResultsDir, f));
@@ -241,12 +250,15 @@ module.exports = function() {
     rows.forEach(row => {
       const dateKey = row.date;
       if (!byDate[dateKey]) {
+        const isChampionship = champDates.has(dateKey);
         byDate[dateKey] = {
           date: row.date,
           dateObj: row.dateObj,
           formattedDate: row.formattedDate,
           results: [],
-          bigBass: null
+          bigBass: null,
+          isChampionship,
+          countsForStandings: !isChampionship
         };
       }
       byDate[dateKey].results.push(row);
@@ -276,6 +288,19 @@ module.exports = function() {
     });
 
     const standings = computeStandings(resultsByDate, meetings);
+
+    // Columns shown on the standings page: only the events that count toward
+    // AOY / CAOY points (the Club Championship is left out).
+    standings.countingDateEntries = resultsByDate
+      .filter(entry => entry.countsForStandings !== false)
+      .map(entry => ({ date: entry.date, formattedDate: entry.formattedDate }));
+
+    standings.championshipDateEntries = resultsByDate
+      .filter(entry => entry.isChampionship)
+      .map(entry => ({ date: entry.date, formattedDate: entry.formattedDate }));
+
+    // Number of scheduled events that count (independent of results posted)
+    standings.countingTournamentsCount = countingTournamentsCount();
 
     return {
       byDate: resultsByDate,
